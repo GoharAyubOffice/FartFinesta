@@ -16,11 +16,16 @@ public class JoystickPlayerExample : MonoBehaviour
 
     private const int maxFartPower = 100; // Maximum fart power
 
+    [SerializeField] private AudioSource audioSource;     // Reference to the AudioSource component
+    public AudioClip fartSound;          // The fart sound clip
+    public ParticleSystem jumpParticles; // Reference to the particle system
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;      // Ensure rotation is frozen to prevent unexpected behavior
         Physics.gravity *= gravityScale; // Scale default gravity
+        audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
     }
 
     private void Update()
@@ -59,6 +64,8 @@ public class JoystickPlayerExample : MonoBehaviour
             rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z); // Reset y velocity to zero for consistent jump
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);     // Apply jump force instantly
             DecreaseFartPower(1); // Decrease fart power by 1 on jump
+            audioSource.PlayOneShot(fartSound); // Play the fart sound
+            jumpParticles.Play(); // Play jump particles
         }
     }
 

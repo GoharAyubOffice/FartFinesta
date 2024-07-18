@@ -4,6 +4,7 @@ public class CollisionSoundManager : MonoBehaviour
 {
     public AudioClip thudSound;   // Sound for obstacle collision
     public AudioClip collectSound; // Sound for bean collection
+    public AudioClip hitSound; // Sound for bean collection
 
     private AudioSource audioSource;
 
@@ -11,6 +12,7 @@ public class CollisionSoundManager : MonoBehaviour
     public float thudVolume = 1.5f;
     public float splatVolume = 1.0f;
     public float collectVolume = 1.0f;
+    public float hitVolume = 1.0f;
 
     void Start()
     {
@@ -23,6 +25,10 @@ public class CollisionSoundManager : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             PlaySound(thudSound, thudVolume);
+        }
+        if(collision.gameObject.CompareTag("Traps"))
+        {
+            PlaySound(hitSound, hitVolume);
         }
     }
 

@@ -10,7 +10,6 @@ public class JoystickPlayerExample : MonoBehaviour
     public int fartPower = 1;
     public int playerPoints = 0;
 
-    public float jumpForce = 10f;       // Force applied when jumping
     public float gravityScale = 2f;     // Adjust gravity scale for realistic fall
     private bool isGameOver = false;    // Track if the game is over
 
@@ -39,15 +38,6 @@ public class JoystickPlayerExample : MonoBehaviour
         {
             GameOver();
         }
-
-        if (Input.GetMouseButtonDown(0) && !isGameOver)
-        {
-            // Check if the touch is on the right side of the screen
-            if (Input.mousePosition.x > Screen.width / 2)
-            {
-                Jump();
-            }
-        }
     }
 
     public void FixedUpdate()
@@ -55,18 +45,6 @@ public class JoystickPlayerExample : MonoBehaviour
         // Movement based on joystick input
         Vector3 direction = Vector3.forward * variableJoystick.Vertical + Vector3.right * variableJoystick.Horizontal;
         rb.AddForce(direction * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
-    }
-
-    void Jump()
-    {
-        if (fartPower > 0)
-        {
-            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z); // Reset y velocity to zero for consistent jump
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);     // Apply jump force instantly
-            DecreaseFartPower(1); // Decrease fart power by 1 on jump
-            audioSource.PlayOneShot(fartSound); // Play the fart sound
-            jumpParticles.Play(); // Play jump particles
-        }
     }
 
     public void IncreaseFartPower(int amount)

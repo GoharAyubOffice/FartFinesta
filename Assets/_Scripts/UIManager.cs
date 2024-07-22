@@ -5,11 +5,11 @@ public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI pointsText;
     public TextMeshProUGUI fartPowerText;
-    public JoystickPlayerExample playerController;
+    public FartPropulsion fartPropulsion;
 
     private void Update()
     {
-        pointsText.text = "Points: " + playerController.playerPoints;
-        fartPowerText.text = "Fart Power: " + playerController.fartPower;
+        pointsText.text = "Points: " + fartPropulsion.playerPoints;
+        fartPowerText.text = "Fart Power: " + fartPropulsion.fartPower;
     }
 }

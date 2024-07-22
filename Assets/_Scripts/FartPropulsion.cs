@@ -6,41 +6,104 @@ public class FartPropulsion : MonoBehaviour
     public float maxFartForce = 20f;
     public float tapTimeThreshold = 0.5f; // Adjust as needed
     private float tapStartTime;
-    private float screenWidth;
     private Rigidbody rb;
+
+    public int fartPower = 1;
+    public int playerPoints = 0;
+    private const int maxFartPower = 100; // Maximum fart power
+
+    [SerializeField] private AudioSource audioSource;     // Reference to the AudioSource component
+    public AudioClip fartSound;          // The fart sound clip
+    public ParticleSystem jumpParticles; // Reference to the particle system
+
+    private bool isGameOver = false;    // Track if the game is over
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        screenWidth = Screen.width;
+        audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
     }
 
     void Update()
     {
-        // Check if there is a touch input
-        if (Input.touchCount > 0)
+        if (fartPower <= 0 && !isGameOver)
         {
-            Touch touch = Input.GetTouch(0);
+            GameOver();
+        }
+    }
 
-            // Check if the touch is on the right half of the screen
-            if (touch.position.x > screenWidth / 2 && touch.phase == TouchPhase.Began)
-            {
-                tapStartTime = Time.time;
-            }
-            else if (touch.position.x > screenWidth / 2 && touch.phase == TouchPhase.Ended)
-            {
-                float tapDuration = Time.time - tapStartTime;
-                float tapForce = Mathf.Lerp(fartForce, maxFartForce, tapDuration / tapTimeThreshold);
-
-                // Call method to apply force to the character
-                ApplyFartForce(tapForce);
-            }
+    public void OnJumpButtonDown()
+    {
+        if (!isGameOver)
+        {
+            float tapDuration = Time.time - tapStartTime;
+            float tapForce = Mathf.Lerp(fartForce, maxFartForce, tapDuration / tapTimeThreshold);
+            ApplyFartForce(tapForce);
         }
     }
 
     void ApplyFartForce(float force)
     {
-        rb.velocity = Vector3.zero; // Reset velocity
-        rb.AddForce(Vector3.up * force, ForceMode.Impulse);
+        if (fartPower > 0)
+        {
+            rb.velocity = Vector3.zero; // Reset velocity
+            rb.AddForce(Vector3.up * force, ForceMode.Impulse);
+            DecreaseFartPower(1); // Decrease fart power by 1 on jump
+            audioSource.PlayOneShot(fartSound); // Play the fart sound
+            jumpParticles.Play(); // Play jump particles
+        }
+    }
+
+    public void IncreaseFartPower(int amount)
+    {
+        fartPower += amount;
+        if (fartPower > maxFartPower)
+        {
+            fartPower = maxFartPower;
+        }
+        // Update UI if necessary
+    }
+
+    public void DecreaseFartPower(float amount)
+    {
+        fartPower -= (int)amount;
+        if (fartPower < 0) fartPower = 0;
+        // Update UI if necessary
+    }
+
+    public void AddPoints(int points)
+    {
+        playerPoints += points;
+        // Update UI if necessary
+    }
+
+    private void GameOver()
+    {
+        isGameOver = true;
+        // Stop player movement
+        rb.velocity = Vector3.zero;
+        rb.isKinematic = true;
+        // Display game over UI or restart game logic
+        Debug.Log("Game Over! Fart Power is 0.");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Beans"))
+        {
+            IncreaseFartPower(1);
+            AddPoints(100);
+            Destroy(other.gameObject); // Destroy the collectible
+        }
+        else if (other.CompareTag("Traps"))
+        {
+            DecreaseFartPower(10); // Decrease fart power by 10 for hitting a trap
+            // Play collision sound
+            AudioSource collisionAudio = other.GetComponent<AudioSource>();
+            if (collisionAudio != null)
+            {
+                collisionAudio.Play();
+            }
+        }
     }
 }

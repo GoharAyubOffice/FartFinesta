@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8338435243629038011}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.07600531, y: -0, z: -0, w: 0.99710745}
+  m_LocalRotation: {x: 0.076005496, y: 0, z: 0, w: 0.99710745}
   m_LocalPosition: {x: 0, y: 4.88, z: -8.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -44,8 +44,8 @@ Camera:
   m_GameObject: {fileID: 8338435243629038011}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 0}
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -66,8 +66,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
+  near clip plane: 0.01
+  far clip plane: 10000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -115,6 +115,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
-  offset: {x: 0, y: 2, z: -5}
+  offset: {x: 0, y: 1.5, z: -13}
   smoothSpeed: 1
   rotationSpeed: 5

@@ -1,37 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3713562539160515191
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4193099867180585358}
-  m_Layer: 0
-  m_Name: FartBubbble
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4193099867180585358
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3713562539160515191}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.871, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6935377895175737819}
-  m_Father: {fileID: 4509374307930862374}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8220365578432124618
 GameObject:
   m_ObjectHideFlags: 0
@@ -50,8 +18,8 @@ GameObject:
   - component: {fileID: 2158766140504827572}
   - component: {fileID: 7561217756099800036}
   - component: {fileID: 2355540496071267087}
-  - component: {fileID: 4948165198492385842}
   - component: {fileID: 4722266567953914888}
+  - component: {fileID: 4948165198492385842}
   - component: {fileID: 3068927480784101636}
   m_Layer: 0
   m_Name: Player
@@ -499,18 +467,6 @@ MonoBehaviour:
   fartForce: 10
   maxFartForce: 20
   tapTimeThreshold: 0.3
---- !u!114 &4948165198492385842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8220365578432124618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b20897cfd835e504ebf2295d6ee8ab0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4722266567953914888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,6 +486,18 @@ MonoBehaviour:
   splatVolume: 1
   collectVolume: 1
   hitVolume: 1
+--- !u!114 &4948165198492385842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8220365578432124618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b20897cfd835e504ebf2295d6ee8ab0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3068927480784101636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,83 +512,83 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   starBurstPrefab: {fileID: 4591313650637563851, guid: d0b17a0d59a9bbf42a0fc4ad240904aa,
     type: 3}
---- !u!1001 &1395721498389554803
+--- !u!1001 &2185751533904512687
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 4193099867180585358}
+    m_TransformParent: {fileID: 4509374307930862374}
     m_Modifications:
-    - target: {fileID: 1364322732837238458, guid: 7b408e6c73b54e044a1a355d04cefc7b,
-        type: 3}
-      propertyPath: m_Name
-      value: JumpParticles
-      objectReference: {fileID: 0}
-    - target: {fileID: 8314190534132987816, guid: 7b408e6c73b54e044a1a355d04cefc7b,
+    - target: {fileID: 2622708432602240801, guid: 72d731f2482f2624b89a8e7fb3f25564,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8314190534132987816, guid: 7b408e6c73b54e044a1a355d04cefc7b,
+    - target: {fileID: 2622708432602240801, guid: 72d731f2482f2624b89a8e7fb3f25564,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.871
       objectReference: {fileID: 0}
-    - target: {fileID: 8314190534132987816, guid: 7b408e6c73b54e044a1a355d04cefc7b,
+    - target: {fileID: 2622708432602240801, guid: 72d731f2482f2624b89a8e7fb3f25564,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8314190534132987816, guid: 7b408e6c73b54e044a1a355d04cefc7b,
+    - target: {fileID: 2622708432602240801, guid: 72d731f2482f2624b89a8e7fb3f25564,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8314190534132987816, guid: 7b408e6c73b54e044a1a355d04cefc7b,
+    - target: {fileID: 2622708432602240801, guid: 72d731f2482f2624b89a8e7fb3f25564,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8314190534132987816, guid: 7b408e6c73b54e044a1a355d04cefc7b,
+    - target: {fileID: 2622708432602240801, guid: 72d731f2482f2624b89a8e7fb3f25564,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8314190534132987816, guid: 7b408e6c73b54e044a1a355d04cefc7b,
+    - target: {fileID: 2622708432602240801, guid: 72d731f2482f2624b89a8e7fb3f25564,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8314190534132987816, guid: 7b408e6c73b54e044a1a355d04cefc7b,
+    - target: {fileID: 2622708432602240801, guid: 72d731f2482f2624b89a8e7fb3f25564,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8314190534132987816, guid: 7b408e6c73b54e044a1a355d04cefc7b,
+    - target: {fileID: 2622708432602240801, guid: 72d731f2482f2624b89a8e7fb3f25564,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8314190534132987816, guid: 7b408e6c73b54e044a1a355d04cefc7b,
+    - target: {fileID: 2622708432602240801, guid: 72d731f2482f2624b89a8e7fb3f25564,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3304621800041280728, guid: 72d731f2482f2624b89a8e7fb3f25564,
+        type: 3}
+      propertyPath: m_Name
+      value: FartBubbble
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7b408e6c73b54e044a1a355d04cefc7b, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 72d731f2482f2624b89a8e7fb3f25564, type: 3}
+--- !u!4 &4193099867180585358 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2622708432602240801, guid: 72d731f2482f2624b89a8e7fb3f25564,
+    type: 3}
+  m_PrefabInstance: {fileID: 2185751533904512687}
+  m_PrefabAsset: {fileID: 0}
 --- !u!198 &6674131775317663807 stripped
 ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5747118913466287692, guid: 7b408e6c73b54e044a1a355d04cefc7b,
+  m_CorrespondingSourceObject: {fileID: 4812692195436930704, guid: 72d731f2482f2624b89a8e7fb3f25564,
     type: 3}
-  m_PrefabInstance: {fileID: 1395721498389554803}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &6935377895175737819 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8314190534132987816, guid: 7b408e6c73b54e044a1a355d04cefc7b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1395721498389554803}
+  m_PrefabInstance: {fileID: 2185751533904512687}
   m_PrefabAsset: {fileID: 0}

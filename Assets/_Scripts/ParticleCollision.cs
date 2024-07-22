@@ -10,10 +10,10 @@ public class ParticleCollision : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            JoystickPlayerExample playerController = other.GetComponent<JoystickPlayerExample>();
-            if (playerController != null)
+            FartPropulsion fart = other.GetComponent<FartPropulsion>();
+            if (fart != null)
             {
-                playerController.DecreaseFartPower(fartPowerDecrease);
+                fart.DecreaseFartPower(fartPowerDecrease);
             }
 
             Debug.Log("Fart Power Decrease");

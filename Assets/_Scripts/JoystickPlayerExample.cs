@@ -27,56 +27,10 @@ public class JoystickPlayerExample : MonoBehaviour
         audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
     }
 
-    private void Update()
-    {
-        if (isInParticleCollision)
-        {
-            DecreaseFartPower(1 * Time.deltaTime); // Decrease fart power continuously
-        }
-
-        if (fartPower <= 0 && !isGameOver)
-        {
-            GameOver();
-        }
-    }
-
     public void FixedUpdate()
     {
         // Movement based on joystick input
         Vector3 direction = Vector3.forward * variableJoystick.Vertical + Vector3.right * variableJoystick.Horizontal;
         rb.AddForce(direction * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
-    }
-
-    public void IncreaseFartPower(int amount)
-    {
-        fartPower += amount;
-        if (fartPower > maxFartPower)
-        {
-            fartPower = maxFartPower;
-        }
-        // Update UI if necessary
-    }
-
-    public void DecreaseFartPower(float amount)
-    {
-        fartPower -= (int)amount;
-        if (fartPower < 0) fartPower = 0;
-        // Update UI if necessary
-    }
-
-    public void AddPoints(int points)
-    {
-        playerPoints += points;
-        // Update UI if necessary
-    }
-
-    private void GameOver()
-    {
-        isGameOver = true;
-        // Stop player movement
-        rb.velocity = Vector3.zero;
-        rb.isKinematic = true;
-        // Display game over UI or restart game logic
-        Debug.Log("Game Over! Fart Power is 0.");
     }
 }

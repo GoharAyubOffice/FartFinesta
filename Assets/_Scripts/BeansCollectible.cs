@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class BeansCollectible : MonoBehaviour
 {
-    public int fartPowerIncrease = 1;
+    public int fartPowerIncrease = 20;
     public int points = 100; // Increase points by 100
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            JoystickPlayerExample playerController = other.GetComponent<JoystickPlayerExample>();
-            if (playerController != null)
+            FartPropulsion fart = other.GetComponent<FartPropulsion>();
+            if (fart != null)
             {
-                playerController.IncreaseFartPower(fartPowerIncrease);
-                playerController.AddPoints(points);
+                fart.IncreaseFartPower(fartPowerIncrease);
+                fart.AddPoints(points);
             }
 
             // Optionally, play a sound or particle effect here

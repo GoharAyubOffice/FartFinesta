@@ -18,10 +18,14 @@ public class FartPropulsion : MonoBehaviour
 
     private bool isGameOver = false;    // Track if the game is over
 
+    private Animator animator;           // Reference to the Animator component
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
+        animator = GetComponent<Animator>(); // Get the Animator component
     }
 
     void Update()
@@ -29,6 +33,16 @@ public class FartPropulsion : MonoBehaviour
         if (fartPower <= 0 && !isGameOver)
         {
             GameOver();
+        }
+
+        // Update animator parameters
+        if (!IsGrounded() && rb.velocity.y < 0)
+        {
+            animator.SetBool("isFall", true);
+        }
+        if(IsGrounded())
+            {
+            animator.SetBool("isFall", false);
         }
     }
 
@@ -51,6 +65,27 @@ public class FartPropulsion : MonoBehaviour
             DecreaseFartPower(1); // Decrease fart power by 1 on jump
             audioSource.PlayOneShot(fartSound); // Play the fart sound
             jumpParticles.Play(); // Play jump particles
+
+            // Set isJumping to true
+            animator.SetBool("isJumping", true);
+            animator.SetBool("isFall", false);
+
+        }
+    }
+
+    private bool IsGrounded()
+    {
+        // Check if the player is grounded using a raycast
+        return Physics.Raycast(transform.position, Vector3.down, 0.2f);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            // Set isJumping and isFalling to false when the player lands on the ground
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFall", false);
         }
     }
 

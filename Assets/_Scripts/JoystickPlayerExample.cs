@@ -12,12 +12,12 @@ public class JoystickPlayerExample : MonoBehaviour
 
     public float gravityScale = 2f;     // Adjust gravity scale for realistic fall
 
-
     [SerializeField] private AudioSource audioSource;     // Reference to the AudioSource component
     public AudioClip fartSound;          // The fart sound clip
     public ParticleSystem jumpParticles; // Reference to the particle system
     private Animator animator;           // Reference to the Animator component
-    private bool isFacingRight = true;   // Track the direction the player is facing
+    private float originalRotationY;     // Store the original Y rotation of the player
+    private const float rotationAngle = 90f; // Angle to rotate for left/right movement
 
     void Start()
     {
@@ -26,6 +26,9 @@ public class JoystickPlayerExample : MonoBehaviour
         Physics.gravity *= gravityScale; // Scale default gravity
         audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
         animator = GetComponent<Animator>(); // Get the Animator component
+
+        // Store the original Y rotation of the player
+        originalRotationY = transform.eulerAngles.y;
     }
 
     void Update()
@@ -34,32 +37,36 @@ public class JoystickPlayerExample : MonoBehaviour
         bool isMovingHorizontally = Mathf.Abs(variableJoystick.Horizontal) > 0.1f; // Adjust threshold as needed
         animator.SetBool("isWalking", isMovingHorizontally); // Assumes the Animator has a boolean parameter named "isWalking"
 
-        // Flip the player sprite based on the direction of movement
+        // Rotate the player based on the joystick input
         if (isMovingHorizontally)
         {
-            if (variableJoystick.Horizontal > 0 && !isFacingRight)
+            if (variableJoystick.Horizontal > 0)
             {
-                Flip();
+                RotatePlayer(rotationAngle); // Rotate to the right
             }
-            else if (variableJoystick.Horizontal < 0 && isFacingRight)
+            else if (variableJoystick.Horizontal < 0)
             {
-                Flip();
+                RotatePlayer(-rotationAngle); // Rotate to the left
             }
+        }
+        else
+        {
+            // Return to the original rotation when not moving horizontally
+            Quaternion targetRotation = Quaternion.Euler(0, originalRotationY, 0);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
         }
     }
 
-    public void FixedUpdate()
+    void FixedUpdate()
     {
         // Movement based on joystick input
         Vector3 direction = Vector3.forward * variableJoystick.Vertical + Vector3.right * variableJoystick.Horizontal;
         rb.AddForce(direction * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
     }
 
-    void Flip()
+    void RotatePlayer(float angle)
     {
-        isFacingRight = !isFacingRight;
-        Vector3 scaler = transform.localScale;
-        scaler.x *= -1; // Flip the x scale to change direction
-        transform.localScale = scaler;
+        // Rotate the player around the Y-axis
+        transform.rotation = Quaternion.Euler(0, originalRotationY + angle, 0);
     }
 }

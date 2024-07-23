@@ -16,7 +16,7 @@ public class FartPropulsion : MonoBehaviour
     public AudioClip fartSound;          // The fart sound clip
     public ParticleSystem jumpParticles; // Reference to the particle system
 
-    private bool isGameOver = false;    // Track if the game is over
+    public bool isGameOver = false;    // Track if the game is over
 
     private Animator animator;           // Reference to the Animator component
 
@@ -112,7 +112,7 @@ public class FartPropulsion : MonoBehaviour
         // Update UI if necessary
     }
 
-    private void GameOver()
+    public void GameOver()
     {
         isGameOver = true;
         // Stop player movement

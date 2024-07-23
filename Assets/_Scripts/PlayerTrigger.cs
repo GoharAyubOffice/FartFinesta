@@ -1,9 +1,13 @@
 using UnityEngine;
 
-
 public class PlayerTrigger : MonoBehaviour
 {
-    //public Animator playerAnimator; // Reference to the player's Animator component
+    public Animator playerAnimator; // Reference to the player's Animator component
+
+    void Start()
+    {
+        playerAnimator = GetComponent<Animator>(); // Get the Animator component
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -12,6 +16,9 @@ public class PlayerTrigger : MonoBehaviour
             // Stop player movement (assuming you have a script controlling movement)
             GetComponent<JoystickPlayerExample>().enabled = false; // Disable movement script
             GetComponent<FartPropulsion>().enabled = false;
+
+            // Set the die animation
+            playerAnimator.SetTrigger("Die");
 
             Debug.Log("Game Over - Player reached the finish point!");
         }

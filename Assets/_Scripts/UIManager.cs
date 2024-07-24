@@ -24,8 +24,8 @@ public class UIManager : MonoBehaviour
     // Method to update UI text
     private void UpdateUI()
     {
-        pointsText.text = "Points: " + fartPropulsion.playerPoints;
-        fartPowerText.text = "Fart: " + fartPropulsion.fartPower;
+        pointsText.text = "" + fartPropulsion.playerPoints;
+        fartPowerText.text = "" + fartPropulsion.fartPower;
 
         // Get the current scene name
         string levelName = SceneManager.GetActiveScene().name;

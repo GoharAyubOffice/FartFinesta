@@ -33,6 +33,6 @@ public class UIManager : MonoBehaviour
         levelText.text = "Level: " + levelName;
 
         string levelNameUI = SceneManager.GetActiveScene().name;
-        levelText.text = "Level: " + levelName;
+        levelTextUI.text = "Level: " + levelName;
     }
 }

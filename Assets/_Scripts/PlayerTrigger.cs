@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PlayerTrigger : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerTrigger : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     public GameObject finishUI; // Reference to the finish UI Canvas
     public TextMeshProUGUI congratsText; // Reference to the congratulations TextMeshPro
+    public AudioClip clappingSound; // Reference to the clapping sound clip
 
     private int playerPoints;
 
@@ -34,17 +36,22 @@ public class PlayerTrigger : MonoBehaviour
             // Set the win animation
             playerAnimator.SetTrigger("Win");
             playerAnimator.SetBool("isWalking", false);
-            audioSource.Play();
 
-            // Show the finish UI and update the text
-            ShowFinishUI();
+            // Play the clapping sound
+            audioSource.PlayOneShot(clappingSound);
+
+            // Start coroutine to show finish UI after a delay
+            StartCoroutine(ShowFinishUIAfterDelay(2f)); // Adjust the delay as needed
 
             Debug.Log("Game Over - Player reached the finish point!");
         }
     }
 
-    void ShowFinishUI()
+    IEnumerator ShowFinishUIAfterDelay(float delay)
     {
+        // Wait for the specified delay
+        yield return new WaitForSeconds(delay);
+
         // Activate the finish UI
         finishUI.SetActive(true);
 
@@ -56,11 +63,30 @@ public class PlayerTrigger : MonoBehaviour
     public void OnNextLevelButtonClicked()
     {
         // Load the next level
-        // Assuming your levels are named "Level1", "Level2", etc.
         string currentSceneName = SceneManager.GetActiveScene().name;
-        int currentLevelNumber = int.Parse(currentSceneName.Replace("Level", ""));
-        string nextLevelName = "Level" + (currentLevelNumber + 1);
+        int currentLevelNumber;
+        if (int.TryParse(currentSceneName, out currentLevelNumber))
+        {
+            string nextLevelName = (currentLevelNumber + 1).ToString();
+            if (Application.CanStreamedLevelBeLoaded(nextLevelName))
+            {
+                SceneManager.LoadScene(nextLevelName);
+            }
+            else
+            {
+                Debug.LogError("Scene '" + nextLevelName + "' couldn't be loaded. Ensure it is added to the build settings.");
+            }
+        }
+        else
+        {
+            Debug.LogError("Current scene name is not a valid number.");
+        }
+    }
 
-        SceneManager.LoadScene(nextLevelName);
+    // This function will be called when the restart button is clicked
+    public void OnRestartButtonClicked()
+    {
+        // Reload the current scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

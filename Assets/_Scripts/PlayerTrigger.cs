@@ -1,22 +1,26 @@
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerTrigger : MonoBehaviour
 {
     public Animator playerAnimator; // Reference to the player's Animator component
     [SerializeField] private Transform player;
     [SerializeField] private AudioSource audioSource;
-    public AudioClip clappingSound; // Reference to the clapping sound clip
+    public GameObject finishUI; // Reference to the finish UI Canvas
+    public TextMeshProUGUI congratsText; // Reference to the congratulations TextMeshPro
 
-    private GameManager gameManager; // Reference to the GameManager script
+    private int playerPoints;
 
     void Start()
     {
         playerAnimator = GetComponent<Animator>(); // Get the Animator component
         player = GetComponent<Transform>();
         audioSource = GetComponent<AudioSource>();
+        playerPoints = GetComponent<FartPropulsion>().playerPoints;
 
-        // Get reference to the GameManager script
-        gameManager = FindObjectOfType<GameManager>();
+        // Ensure the finish UI is initially inactive
+        finishUI.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
@@ -30,21 +34,33 @@ public class PlayerTrigger : MonoBehaviour
             // Set the win animation
             playerAnimator.SetTrigger("Win");
             playerAnimator.SetBool("isWalking", false);
+            audioSource.Play();
 
-            // Play the clapping sound
-            if (clappingSound != null)
-            {
-                audioSource.clip = clappingSound;
-                audioSource.Play();
-            }
+            // Show the finish UI and update the text
+            ShowFinishUI();
 
             Debug.Log("Game Over - Player reached the finish point!");
-
-            // Call FinishGame method from GameManager
-            if (gameManager != null)
-            {
-                gameManager.FinishGame();
-            }
         }
+    }
+
+    void ShowFinishUI()
+    {
+        // Activate the finish UI
+        finishUI.SetActive(true);
+
+        // Update the points and congratulations text
+        congratsText.text = "Congratulations!";
+    }
+
+    // This function will be called when the next level button is clicked
+    public void OnNextLevelButtonClicked()
+    {
+        // Load the next level
+        // Assuming your levels are named "Level1", "Level2", etc.
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        int currentLevelNumber = int.Parse(currentSceneName.Replace("Level", ""));
+        string nextLevelName = "Level" + (currentLevelNumber + 1);
+
+        SceneManager.LoadScene(nextLevelName);
     }
 }

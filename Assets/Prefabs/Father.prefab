@@ -51,8 +51,8 @@ GameObject:
   - component: {fileID: 6555271641455521681}
   - component: {fileID: 5967568076985577551}
   - component: {fileID: 8917930117463800767}
-  - component: {fileID: 6418376196866056181}
   - component: {fileID: 6631268706767161738}
+  - component: {fileID: 6418376196866056181}
   m_Layer: 0
   m_Name: Father
   m_TagString: Player
@@ -532,10 +532,8 @@ MonoBehaviour:
   fartPower: 100
   playerPoints: 0
   gravityScale: 2
-  audioSource: {fileID: 0}
-  fartSound: {fileID: 8300000, guid: f9d74883f8b094f478b44c1df6b93acc, type: 3}
   jumpParticles: {fileID: 3650015120562567838}
-  dustParticles: {fileID: 0}
+  dustParticles: {fileID: 9061147751717464231}
 --- !u!114 &3318297744476645625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -557,6 +555,7 @@ MonoBehaviour:
   fartSound: {fileID: 8300000, guid: f9d74883f8b094f478b44c1df6b93acc, type: 3}
   jumpParticles: {fileID: 3650015120562567838}
   isGameOver: 0
+  animator: {fileID: 6418376196866056181}
 --- !u!114 &6555271641455521681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -591,7 +590,8 @@ MonoBehaviour:
   playerAnimator: {fileID: 0}
   player: {fileID: 0}
   audioSource: {fileID: 6095345810612042194}
-  clappingSound: {fileID: 8300000, guid: 1200e3546f3920a4892b3c6867343e4a, type: 3}
+  finishUI: {fileID: 0}
+  congratsText: {fileID: 0}
 --- !u!114 &8917930117463800767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,6 +606,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   starBurstPrefab: {fileID: 4591313650637563851, guid: d0b17a0d59a9bbf42a0fc4ad240904aa,
     type: 3}
+--- !u!114 &6631268706767161738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815503696552005045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a75f499b3c0fd4469f40080db1f2d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dustParticles: {fileID: 9061147751717464231}
 --- !u!95 &6418376196866056181
 Animator:
   serializedVersion: 5
@@ -627,19 +640,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6631268706767161738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815503696552005045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a75f499b3c0fd4469f40080db1f2d72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dustParticles: {fileID: 9061147751717464231}
 --- !u!1 &2440032063465941549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,6 +1028,26 @@ PrefabInstance:
         type: 3}
       propertyPath: ShapeModule.radius.value
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277646589102337015, guid: fa1b83420b5c07349990c6bbb5a12391,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277646589102337015, guid: fa1b83420b5c07349990c6bbb5a12391,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.4697401
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277646589102337015, guid: fa1b83420b5c07349990c6bbb5a12391,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.47717792
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277646589102337015, guid: fa1b83420b5c07349990c6bbb5a12391,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.49056602
       objectReference: {fileID: 0}
     - target: {fileID: 1444491956077449009, guid: fa1b83420b5c07349990c6bbb5a12391,
         type: 3}

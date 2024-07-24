@@ -18,14 +18,18 @@ public class FartPropulsion : MonoBehaviour
 
     public bool isGameOver = false;    // Track if the game is over
 
-    private Animator animator;           // Reference to the Animator component
-
+    [SerializeField] private Animator animator;           // Reference to the Animator component
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
         animator = GetComponent<Animator>(); // Get the Animator component
+
+        if (animator == null)
+        {
+            Debug.LogError("Animator component not found on the GameObject.");
+        }
     }
 
     void Update()
@@ -40,8 +44,8 @@ public class FartPropulsion : MonoBehaviour
         {
             animator.SetBool("isFall", true);
         }
-        if(IsGrounded())
-            {
+        if (IsGrounded())
+        {
             animator.SetBool("isFall", false);
         }
     }
@@ -67,9 +71,11 @@ public class FartPropulsion : MonoBehaviour
             jumpParticles.Play(); // Play jump particles
 
             // Set isJumping to true
-            animator.SetBool("isJumping", true);
-            animator.SetBool("isFall", false);
-
+            if (animator != null)
+            {
+                animator.SetBool("isJumping", true);
+                animator.SetBool("isFall", false);
+            }
         }
     }
 
@@ -83,9 +89,12 @@ public class FartPropulsion : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            // Set isJumping and isFalling to false when the player lands on the ground
-            animator.SetBool("isJumping", false);
-            animator.SetBool("isFall", false);
+            // Set isJumping and isFall to false when the player lands on the ground
+            if (animator != null)
+            {
+                animator.SetBool("isJumping", false);
+                animator.SetBool("isFall", false);
+            }
         }
     }
 

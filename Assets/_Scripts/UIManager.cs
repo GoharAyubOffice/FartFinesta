@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI pointsText;       // Reference to the points text UI element
     public TextMeshProUGUI fartPowerText;    // Reference to the fart power text UI element
     public TextMeshProUGUI levelText;        // Reference to the level text UI element
+    public TextMeshProUGUI levelTextUI;        // Reference to the level text UI element
     public FartPropulsion fartPropulsion;    // Reference to the FartPropulsion script
 
     private void Start()
@@ -29,6 +30,9 @@ public class UIManager : MonoBehaviour
 
         // Get the current scene name
         string levelName = SceneManager.GetActiveScene().name;
+        levelText.text = "Level: " + levelName;
+
+        string levelNameUI = SceneManager.GetActiveScene().name;
         levelText.text = "Level: " + levelName;
     }
 }

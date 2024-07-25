@@ -12,14 +12,14 @@ public class PlayerTrigger : MonoBehaviour
     public TextMeshProUGUI congratsText; // Reference to the congratulations TextMeshPro
     public AudioClip clappingSound; // Reference to the clapping sound clip
 
-    private int playerPoints;
+    public GameManager gameManager;
+
 
     void Start()
     {
         playerAnimator = GetComponent<Animator>(); // Get the Animator component
         player = GetComponent<Transform>();
         audioSource = GetComponent<AudioSource>();
-        playerPoints = GetComponent<FartPropulsion>().playerPoints;
 
         // Ensure the finish UI is initially inactive
         finishUI.SetActive(false);
@@ -36,6 +36,8 @@ public class PlayerTrigger : MonoBehaviour
             // Set the win animation
             playerAnimator.SetTrigger("Win");
             playerAnimator.SetBool("isWalking", false);
+
+            gameManager.FinishGame();
 
             // Play the clapping sound
             audioSource.PlayOneShot(clappingSound);

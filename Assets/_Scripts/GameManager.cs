@@ -1,5 +1,7 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,29 +9,65 @@ public class GameManager : MonoBehaviour
     public GameObject nextLevelScreen; // Reference to the next level UI
     public GameObject player;      // Reference to the player GameObject
 
+    public GameObject[] silverStars; // Array of silver star GameObjects
+    public GameObject[] goldenStars; // Array of golden star GameObjects
+    public TextMeshProUGUI timerText; // Reference to the timer UI text
+
     private JoystickPlayerExample joystickPlayerExample;
     private FartPropulsion fartPropulsion;
+    public Button fartButton;
+
+    private bool isGameFinished = false;
+    private float startTime;
 
     void Start()
     {
-        // Get references to the player controller scripts
+        if (player == null)
+        {
+            Debug.LogError("Player GameObject is not assigned.");
+            return;
+        }
+
         joystickPlayerExample = player.GetComponent<JoystickPlayerExample>();
         fartPropulsion = player.GetComponent<FartPropulsion>();
 
-        // Show the start screen and disable player controllers
+        if (joystickPlayerExample == null)
+        {
+            Debug.LogError("JoystickPlayerExample component is missing on the player GameObject.");
+        }
+
+        if (fartPropulsion == null)
+        {
+            Debug.LogError("FartPropulsion component is missing on the player GameObject.");
+        }
+
+        if (startScreen == null || nextLevelScreen == null || timerText == null)
+        {
+            Debug.LogError("One or more UI elements are not assigned.");
+        }
+
         startScreen.SetActive(true);
         joystickPlayerExample.enabled = false;
         fartPropulsion.enabled = false;
 
-        // Pause the game initially
         Time.timeScale = 0;
-
-        Debug.Log("GameManager initialized.");
+        startTime = Time.time; // Initialize timer
     }
 
     void Update()
     {
-        // Check for touch input to start the game
+        if (isGameFinished)
+            return;
+
+        if (timerText == null)
+        {
+            Debug.LogError("Timer Text is not assigned.");
+            return;
+        }
+
+        float elapsedTime = Time.time - startTime;
+        timerText.text = "Time: " + Mathf.Round(elapsedTime).ToString();
+
         if (Input.touchCount > 0)
         {
             StartGame();
@@ -38,51 +76,116 @@ public class GameManager : MonoBehaviour
 
     void StartGame()
     {
-        // Hide the start screen and enable player controllers
         startScreen.SetActive(false);
-        joystickPlayerExample.enabled = true;
-        fartPropulsion.enabled = true;
-
-        // Unpause the game
+        if (joystickPlayerExample != null)
+        {
+            joystickPlayerExample.enabled = true;
+        }
+        if (fartPropulsion != null)
+        {
+            fartPropulsion.enabled = true;
+        }
         Time.timeScale = 1;
+    }
 
-        Debug.Log("Game started.");
+    public void FinishGame()
+    {
+        if (isGameFinished) return; // Ensure the game finish logic runs only once
+
+        isGameFinished = true;
+        if (joystickPlayerExample != null)
+        {
+            joystickPlayerExample.enabled = false;
+        }
+        if (fartPropulsion != null)
+        {
+            fartPropulsion.enabled = false;
+        }
+        if (fartButton != null)
+        {
+            fartButton.enabled = false;
+        }
+
+        // Calculate elapsed time
+        float elapsedTime = Time.time - startTime;
+        Debug.Log("Game finished. Elapsed Time: " + elapsedTime);
+
+        // Determine star count based on time
+        int starCount = 1; // Default to 1 star
+        if (elapsedTime <= 20)
+        {
+            starCount = 3;
+        }
+        else if (elapsedTime <= 25)
+        {
+            starCount = 2;
+        }
+
+        // Show stars based on the calculated star count
+        ShowStars(starCount);
+    }
+
+    void ShowStars(int count)
+    {
+        Debug.Log("Showing stars with count: " + count);
+
+        if (silverStars.Length == 0 || goldenStars.Length == 0)
+        {
+            Debug.LogError("Star arrays are not properly assigned.");
+            return;
+        }
+
+        // Show silver stars
+        foreach (var star in silverStars)
+        {
+            if (star != null)
+            {
+                star.SetActive(true);
+            }
+        }
+
+        // Show golden stars based on count
+        for (int i = 0; i < goldenStars.Length; i++)
+        {
+            if (goldenStars[i] != null)
+            {
+                goldenStars[i].SetActive(i < count);
+            }
+        }
     }
 
     public void ShowNextLevelScreen()
     {
-        // Show next level UI after a delay to allow player win animation
-        Invoke(nameof(ShowNextLevelScreenDelayed), 2f); // Adjust delay as needed
+        Invoke(nameof(ShowNextLevelScreenDelayed), 2f);
     }
 
     void ShowNextLevelScreenDelayed()
     {
-        nextLevelScreen.SetActive(true);
-        joystickPlayerExample.enabled = false;
-        fartPropulsion.enabled = false;
-
-        // Pause the game
+        if (nextLevelScreen != null)
+        {
+            nextLevelScreen.SetActive(true);
+        }
+        if (joystickPlayerExample != null)
+        {
+            joystickPlayerExample.enabled = false;
+        }
+        if (fartPropulsion != null)
+        {
+            fartPropulsion.enabled = false;
+        }
         Time.timeScale = 0;
-
-        Debug.Log("Next Level Screen shown.");
     }
 
     public void OnNextLevelButtonClicked()
     {
-        // Load the next level
         Scene currentScene = SceneManager.GetActiveScene();
-        string nextSceneName = currentScene.name == "1" ? "2" : "1"; // Toggle between level 1 and 2
+        string nextSceneName = currentScene.name == "1" ? "2" : "1";
         SceneManager.LoadScene(nextSceneName);
-
-        Debug.Log("Loading next level: " + nextSceneName);
     }
 
     public void OnRestartButtonClicked()
     {
-        // Restart the current level
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
-
-        Debug.Log("Restarting level: " + currentScene.name);
     }
 }

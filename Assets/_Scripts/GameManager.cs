@@ -1,22 +1,20 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject startScreen; // Reference to the "Touch to Start" UI
+    public GameObject nextLevelScreen; // Reference to the next level UI
     public GameObject player;      // Reference to the player GameObject
-    public Button fartButton;
 
     private JoystickPlayerExample joystickPlayerExample;
     private FartPropulsion fartPropulsion;
-    [SerializeField] private bool isGameFinished = false; // Track if the game has finished
 
     void Start()
     {
         // Get references to the player controller scripts
         joystickPlayerExample = player.GetComponent<JoystickPlayerExample>();
         fartPropulsion = player.GetComponent<FartPropulsion>();
-        fartButton = fartButton.GetComponent<Button>();
 
         // Show the start screen and disable player controllers
         startScreen.SetActive(true);
@@ -25,12 +23,14 @@ public class GameManager : MonoBehaviour
 
         // Pause the game initially
         Time.timeScale = 0;
+
+        Debug.Log("GameManager initialized.");
     }
 
     void Update()
     {
-        // Check for touch input to start the game, only if the game is not finished
-        if (Input.touchCount > 0 && !isGameFinished)
+        // Check for touch input to start the game
+        if (Input.touchCount > 0)
         {
             StartGame();
         }
@@ -45,18 +45,44 @@ public class GameManager : MonoBehaviour
 
         // Unpause the game
         Time.timeScale = 1;
+
+        Debug.Log("Game started.");
     }
 
-    public void FinishGame()
+    public void ShowNextLevelScreen()
     {
-        // Stop player movement and jumping
+        // Show next level UI after a delay to allow player win animation
+        Invoke(nameof(ShowNextLevelScreenDelayed), 2f); // Adjust delay as needed
+    }
+
+    void ShowNextLevelScreenDelayed()
+    {
+        nextLevelScreen.SetActive(true);
         joystickPlayerExample.enabled = false;
         fartPropulsion.enabled = false;
 
-        // Set the game finished flag
-        isGameFinished = true;
-        fartButton.enabled = false;
+        // Pause the game
+        Time.timeScale = 0;
 
-        // Optionally, you can add code here to display a finish screen or other end-game logic
+        Debug.Log("Next Level Screen shown.");
+    }
+
+    public void OnNextLevelButtonClicked()
+    {
+        // Load the next level
+        Scene currentScene = SceneManager.GetActiveScene();
+        string nextSceneName = currentScene.name == "1" ? "2" : "1"; // Toggle between level 1 and 2
+        SceneManager.LoadScene(nextSceneName);
+
+        Debug.Log("Loading next level: " + nextSceneName);
+    }
+
+    public void OnRestartButtonClicked()
+    {
+        // Restart the current level
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+
+        Debug.Log("Restarting level: " + currentScene.name);
     }
 }

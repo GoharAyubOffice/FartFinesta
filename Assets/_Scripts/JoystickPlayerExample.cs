@@ -2,7 +2,7 @@
 
 public class JoystickPlayerExample : MonoBehaviour
 {
-    public float speed;
+    public float speed = 20f;  // Ensure this is set to the correct default value
     public VariableJoystick variableJoystick;
     public Rigidbody rb;
 
@@ -12,6 +12,8 @@ public class JoystickPlayerExample : MonoBehaviour
 
     public float gravityScale = 2f;     // Adjust gravity scale for realistic fall
 
+    [SerializeField] private AudioSource audioSource;     // Reference to the AudioSource component
+    public AudioClip fartSound;          // The fart sound clip
     public ParticleSystem jumpParticles; // Reference to the particle system
     public ParticleSystem dustParticles; // Reference to the dust particle system
     private Animator animator;           // Reference to the Animator component
@@ -19,17 +21,29 @@ public class JoystickPlayerExample : MonoBehaviour
     private const float rotationAngle = 90f; // Angle to rotate for left/right movement
     public bool isWalking { get; private set; } // Track if the player is walking
 
+    public AudioClip walkingSound;       // The walking sound clip
+    private AudioSource walkingAudioSource; // Separate AudioSource for walking sound
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;      // Ensure rotation is frozen to prevent unexpected behavior
-        Physics.gravity *= gravityScale; // Scale default gravity
+        Physics.gravity = new Vector3(0, -9.81f, 0) * gravityScale; // Ensure gravity is set correctly
+        audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
         animator = GetComponent<Animator>(); // Get the Animator component
 
         // Store the original Y rotation of the player
         originalRotationY = transform.eulerAngles.y;
 
+        // Create a separate AudioSource for the walking sound
+        walkingAudioSource = gameObject.AddComponent<AudioSource>();
+        walkingAudioSource.clip = walkingSound;
+        walkingAudioSource.loop = true; // Loop the walking sound
+        walkingAudioSource.playOnAwake = false;
+
         isWalking = true;
+
+        Debug.Log("JoystickPlayerExample initialized with speed: " + speed + ", gravityScale: " + gravityScale);
     }
 
     void Update()
@@ -49,12 +63,17 @@ public class JoystickPlayerExample : MonoBehaviour
             {
                 RotatePlayer(-rotationAngle); // Rotate to the left
             }
+            if (!walkingAudioSource.isPlaying)
+            {
+                walkingAudioSource.Play(); // Play the walking sound if not already playing
+            }
         }
         else
         {
             // Return to the original rotation when not moving horizontally
             Quaternion targetRotation = Quaternion.Euler(0, originalRotationY, 0);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
+            walkingAudioSource.Stop(); // Stop the walking sound if not walking
         }
 
         // Control the dust particles emission based on movement

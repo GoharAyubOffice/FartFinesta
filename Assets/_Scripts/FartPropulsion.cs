@@ -1,11 +1,9 @@
 using UnityEngine;
+using UnityEngine.EventSystems; // Ensure this is included if using UI buttons
 
 public class FartPropulsion : MonoBehaviour
 {
-    public float fartForce = 10f;
-    public float maxFartForce = 20f;
-    public float tapTimeThreshold = 0.5f; // Adjust as needed
-    private float tapStartTime;
+    public float continuousForce = 15f; // Adjust as needed for continuous force
     private Rigidbody rb;
 
     public int fartPower = 1;
@@ -18,7 +16,11 @@ public class FartPropulsion : MonoBehaviour
 
     public bool isGameOver = false;    // Track if the game is over
 
-    [SerializeField] private Animator animator;           // Reference to the Animator component
+    public GameObject gameOverScreen; // Reference to the game over UI
+
+    private Animator animator;           // Reference to the Animator component
+
+    private bool isHoldingJumpButton = false;
 
     void Start()
     {
@@ -26,10 +28,8 @@ public class FartPropulsion : MonoBehaviour
         audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
         animator = GetComponent<Animator>(); // Get the Animator component
 
-        if (animator == null)
-        {
-            Debug.LogError("Animator component not found on the GameObject.");
-        }
+        rb.mass = 1f; // Set to the desired mass for consistent jump
+        Physics.gravity = new Vector3(0, -9.81f, 0) * 2f; // Ensure gravity is set correctly
     }
 
     void Update()
@@ -48,34 +48,65 @@ public class FartPropulsion : MonoBehaviour
         {
             animator.SetBool("isFall", false);
         }
-    }
 
-    public void OnJumpButtonDown()
-    {
-        if (!isGameOver)
+        // Apply continuous force while holding the button
+        if (isHoldingJumpButton && !isGameOver)
         {
-            float tapDuration = Time.time - tapStartTime;
-            float tapForce = Mathf.Lerp(fartForce, maxFartForce, tapDuration / tapTimeThreshold);
-            ApplyFartForce(tapForce);
+            ApplyContinuousFartForce();
+        }
+        else
+        {
+            // Stop particle system if not holding the button
+            if (jumpParticles.isPlaying)
+            {
+                jumpParticles.Stop();
+            }
         }
     }
 
-    void ApplyFartForce(float force)
+    public void OnJumpButtonDown(BaseEventData eventData)
+    {
+        if (!isGameOver)
+        {
+            isHoldingJumpButton = true;
+            // Optionally, you might want to play sound or particles here
+        }
+    }
+
+    public void OnJumpButtonUp(BaseEventData eventData)
+    {
+        if (!isGameOver)
+        {
+            isHoldingJumpButton = false;
+            // Stop particle system when button is released
+            if (jumpParticles.isPlaying)
+            {
+                jumpParticles.Stop();
+            }
+        }
+    }
+
+    void ApplyContinuousFartForce()
     {
         if (fartPower > 0)
         {
-            rb.velocity = Vector3.zero; // Reset velocity
-            rb.AddForce(Vector3.up * force, ForceMode.Impulse);
-            DecreaseFartPower(1); // Decrease fart power by 1 on jump
-            audioSource.PlayOneShot(fartSound); // Play the fart sound
-            jumpParticles.Play(); // Play jump particles
+            rb.AddForce(Vector3.up * continuousForce, ForceMode.Acceleration);
+            DecreaseFartPower(Time.deltaTime * 5); // Decrease fart power over time while holding
+
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play(); // Play the fart sound continuously
+            }
+
+            // Play jump particles continuously
+            if (!jumpParticles.isPlaying)
+            {
+                jumpParticles.Play();
+            }
 
             // Set isJumping to true
-            if (animator != null)
-            {
-                animator.SetBool("isJumping", true);
-                animator.SetBool("isFall", false);
-            }
+            animator.SetBool("isJumping", true);
+            animator.SetBool("isFall", false);
         }
     }
 
@@ -89,12 +120,9 @@ public class FartPropulsion : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            // Set isJumping and isFall to false when the player lands on the ground
-            if (animator != null)
-            {
-                animator.SetBool("isJumping", false);
-                animator.SetBool("isFall", false);
-            }
+            // Set isJumping and isFalling to false when the player lands on the ground
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFall", false);
         }
     }
 
@@ -128,6 +156,8 @@ public class FartPropulsion : MonoBehaviour
         rb.velocity = Vector3.zero;
         rb.isKinematic = true;
         // Display game over UI or restart game logic
+        gameOverScreen.SetActive(true);
+
         Debug.Log("Game Over! Fart Power is 0.");
     }
 

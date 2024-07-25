@@ -1,9 +1,9 @@
 using UnityEngine;
-using UnityEngine.EventSystems; // Ensure this is included if using UI buttons
+using UnityEngine.EventSystems; // Make sure this is included for UI interaction
 
 public class FartPropulsion : MonoBehaviour
 {
-    public float continuousForce = 15f; // Adjust as needed for continuous force
+    public float continuousForce = 10f; // Adjusted continuous force
     private Rigidbody rb;
 
     public int fartPower = 1;
@@ -30,6 +30,7 @@ public class FartPropulsion : MonoBehaviour
 
         rb.mass = 1f; // Set to the desired mass for consistent jump
         Physics.gravity = new Vector3(0, -9.81f, 0) * 2f; // Ensure gravity is set correctly
+
     }
 
     void Update()
@@ -54,14 +55,6 @@ public class FartPropulsion : MonoBehaviour
         {
             ApplyContinuousFartForce();
         }
-        else
-        {
-            // Stop particle system if not holding the button
-            if (jumpParticles.isPlaying)
-            {
-                jumpParticles.Stop();
-            }
-        }
     }
 
     public void OnJumpButtonDown(BaseEventData eventData)
@@ -70,6 +63,10 @@ public class FartPropulsion : MonoBehaviour
         {
             isHoldingJumpButton = true;
             // Optionally, you might want to play sound or particles here
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play(); // Play the fart sound continuously
+            }
         }
     }
 
@@ -90,12 +87,13 @@ public class FartPropulsion : MonoBehaviour
     {
         if (fartPower > 0)
         {
-            rb.AddForce(Vector3.up * continuousForce, ForceMode.Acceleration);
-            DecreaseFartPower(Time.deltaTime * 5); // Decrease fart power over time while holding
+            // Apply continuous upward force
+            rb.AddForce(Vector3.up * continuousForce, ForceMode.VelocityChange);
 
+            // Ensure audio plays continuously while holding
             if (!audioSource.isPlaying)
             {
-                audioSource.Play(); // Play the fart sound continuously
+                audioSource.Play();
             }
 
             // Play jump particles continuously
@@ -107,6 +105,9 @@ public class FartPropulsion : MonoBehaviour
             // Set isJumping to true
             animator.SetBool("isJumping", true);
             animator.SetBool("isFall", false);
+
+            // Decrease fart power over time while holding
+            DecreaseFartPower(Time.deltaTime * 5);
         }
     }
 

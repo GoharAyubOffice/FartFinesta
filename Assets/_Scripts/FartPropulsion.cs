@@ -88,7 +88,8 @@ public class FartPropulsion : MonoBehaviour
         if (fartPower > 0)
         {
             // Apply continuous upward force
-            rb.AddForce(Vector3.up * continuousForce, ForceMode.VelocityChange);
+            rb.AddForce(new Vector3(0,50,0) * continuousForce, ForceMode.Acceleration);
+            rb.velocity *= 0.25f;
 
             // Ensure audio plays continuously while holding
             if (!audioSource.isPlaying)

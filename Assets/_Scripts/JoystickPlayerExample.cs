@@ -21,8 +21,6 @@ public class JoystickPlayerExample : MonoBehaviour
     private const float rotationAngle = 90f; // Angle to rotate for left/right movement
     public bool isWalking { get; private set; } // Track if the player is walking
 
-    public AudioClip walkingSound;       // The walking sound clip
-    private AudioSource walkingAudioSource; // Separate AudioSource for walking sound
 
     void Start()
     {
@@ -36,10 +34,6 @@ public class JoystickPlayerExample : MonoBehaviour
         originalRotationY = transform.eulerAngles.y;
 
         // Create a separate AudioSource for the walking sound
-        walkingAudioSource = gameObject.AddComponent<AudioSource>();
-        walkingAudioSource.clip = walkingSound;
-        walkingAudioSource.loop = true; // Loop the walking sound
-        walkingAudioSource.playOnAwake = false;
 
         isWalking = true;
 
@@ -63,17 +57,12 @@ public class JoystickPlayerExample : MonoBehaviour
             {
                 RotatePlayer(-rotationAngle); // Rotate to the left
             }
-            if (!walkingAudioSource.isPlaying)
-            {
-                walkingAudioSource.Play(); // Play the walking sound if not already playing
-            }
         }
         else
         {
             // Return to the original rotation when not moving horizontally
             Quaternion targetRotation = Quaternion.Euler(0, originalRotationY, 0);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
-            walkingAudioSource.Stop(); // Stop the walking sound if not walking
         }
 
         // Control the dust particles emission based on movement

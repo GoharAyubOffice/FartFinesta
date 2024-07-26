@@ -5326,7 +5326,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8904479237575699059}
@@ -5598,7 +5598,7 @@ MonoBehaviour:
   gravityScale: 1
   audioSource: {fileID: 0}
   fartSound: {fileID: 0}
-  jumpParticles: {fileID: 0}
+  jumpParticles: {fileID: 7868026802804975507}
   dustParticles: {fileID: 1330779002101939733}
 --- !u!114 &3145353581152544280
 MonoBehaviour:
@@ -5617,7 +5617,7 @@ MonoBehaviour:
   playerPoints: 0
   audioSource: {fileID: 1815463821322287331}
   fartSound: {fileID: 8300000, guid: f9d74883f8b094f478b44c1df6b93acc, type: 3}
-  jumpParticles: {fileID: 0}
+  jumpParticles: {fileID: 7868026802804975507}
   isGameOver: 0
   gameOverScreen: {fileID: 0}
 --- !u!114 &2397365441073779806
@@ -5672,6 +5672,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   starBurstPrefab: {fileID: 4591313650637563851, guid: d0b17a0d59a9bbf42a0fc4ad240904aa,
     type: 3}
+  fartPowerDecrease: 10
+  fart: {fileID: 0}
 --- !u!114 &9028146397478260491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5923,6 +5925,12 @@ PrefabInstance:
 --- !u!4 &5877468811947300471 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8314190534132987816, guid: 7b408e6c73b54e044a1a355d04cefc7b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2517800826645717471}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7868026802804975507 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5747118913466287692, guid: 7b408e6c73b54e044a1a355d04cefc7b,
     type: 3}
   m_PrefabInstance: {fileID: 2517800826645717471}
   m_PrefabAsset: {fileID: 0}

@@ -5,12 +5,27 @@ public class CollisionEffect : MonoBehaviour
 {
     public GameObject starBurstPrefab; // Reference to the StarBurst particle system prefab
 
+    public int fartPowerDecrease = 1;
+
+    [SerializeField] private FartPropulsion fart;
+
+    private void Start()
+    {
+         fart = GetComponent<FartPropulsion>();
+    }
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Traps") || (collision.gameObject.CompareTag("Obstacle"))) // Change "Obstacle" to whatever tag your obstacles have
         {
             // Instantiate star burst effect at the collision point
             GameObject starBurst = Instantiate(starBurstPrefab, collision.contacts[0].point, Quaternion.identity);
+
+            if (fart != null)
+            {
+                fart.DecreaseFartPower(fartPowerDecrease);
+            }
+
+            Debug.Log("Fart Power Decrease");
 
             // Destroy the star burst after 1 second
             Destroy(starBurst, 1f);

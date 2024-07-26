@@ -30,7 +30,6 @@ public class FartPropulsion : MonoBehaviour
 
         rb.mass = 1f; // Set to the desired mass for consistent jump
         Physics.gravity = new Vector3(0, -9.81f, 0) * 2f; // Ensure gravity is set correctly
-
     }
 
     void Update()
@@ -88,7 +87,7 @@ public class FartPropulsion : MonoBehaviour
         if (fartPower > 0)
         {
             // Apply continuous upward force
-            rb.AddForce(new Vector3(0,50,0) * continuousForce, ForceMode.Acceleration);
+            rb.AddForce(new Vector3(0, 50, 0) * continuousForce, ForceMode.Acceleration);
             rb.velocity *= 0.25f;
 
             // Ensure audio plays continuously while holding
@@ -157,8 +156,9 @@ public class FartPropulsion : MonoBehaviour
         // Stop player movement
         rb.velocity = Vector3.zero;
         rb.isKinematic = true;
+
         // Display game over UI or restart game logic
-        gameOverScreen.SetActive(true);
+        FindObjectOfType<GameManager>().ShowGameOverScreen();
 
         Debug.Log("Game Over! Fart Power is 0.");
     }

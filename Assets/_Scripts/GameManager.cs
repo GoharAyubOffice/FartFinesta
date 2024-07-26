@@ -7,11 +7,16 @@ public class GameManager : MonoBehaviour
 {
     public GameObject startScreen; // Reference to the "Touch to Start" UI
     public GameObject nextLevelScreen; // Reference to the next level UI
-    public GameObject player;      // Reference to the player GameObject
+    public GameObject player; // Reference to the player GameObject
 
     public GameObject[] silverStars; // Array of silver star GameObjects
     public GameObject[] goldenStars; // Array of golden star GameObjects
     public TextMeshProUGUI timerText; // Reference to the timer UI text
+
+    public GameObject restartButton; // Reference to the restart button
+    public GameObject nextLevelButton; // Reference to the next level button
+
+    public TextMeshProUGUI gameOverMessageText; // Reference to the game over message text
 
     private JoystickPlayerExample joystickPlayerExample;
     private FartPropulsion fartPropulsion;
@@ -22,29 +27,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        if (player == null)
-        {
-            Debug.LogError("Player GameObject is not assigned.");
-            return;
-        }
-
         joystickPlayerExample = player.GetComponent<JoystickPlayerExample>();
         fartPropulsion = player.GetComponent<FartPropulsion>();
-
-        if (joystickPlayerExample == null)
-        {
-            Debug.LogError("JoystickPlayerExample component is missing on the player GameObject.");
-        }
-
-        if (fartPropulsion == null)
-        {
-            Debug.LogError("FartPropulsion component is missing on the player GameObject.");
-        }
-
-        if (startScreen == null || nextLevelScreen == null || timerText == null)
-        {
-            Debug.LogError("One or more UI elements are not assigned.");
-        }
 
         startScreen.SetActive(true);
         joystickPlayerExample.enabled = false;
@@ -56,35 +40,23 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (isGameFinished)
-            return;
-
-        if (timerText == null)
+        if (!isGameFinished)
         {
-            Debug.LogError("Timer Text is not assigned.");
-            return;
-        }
+            float elapsedTime = Time.time - startTime;
+            timerText.text = "Time: " + Mathf.Round(elapsedTime).ToString();
 
-        float elapsedTime = Time.time - startTime;
-        timerText.text = "Time: " + Mathf.Round(elapsedTime).ToString();
-
-        if (Input.touchCount > 0)
-        {
-            StartGame();
+            if (Input.touchCount > 0)
+            {
+                StartGame();
+            }
         }
     }
 
     void StartGame()
     {
         startScreen.SetActive(false);
-        if (joystickPlayerExample != null)
-        {
-            joystickPlayerExample.enabled = true;
-        }
-        if (fartPropulsion != null)
-        {
-            fartPropulsion.enabled = true;
-        }
+        joystickPlayerExample.enabled = true;
+        fartPropulsion.enabled = true;
         Time.timeScale = 1;
     }
 
@@ -93,22 +65,12 @@ public class GameManager : MonoBehaviour
         if (isGameFinished) return; // Ensure the game finish logic runs only once
 
         isGameFinished = true;
-        if (joystickPlayerExample != null)
-        {
-            joystickPlayerExample.enabled = false;
-        }
-        if (fartPropulsion != null)
-        {
-            fartPropulsion.enabled = false;
-        }
-        if (fartButton != null)
-        {
-            fartButton.enabled = false;
-        }
+        joystickPlayerExample.enabled = false;
+        fartPropulsion.enabled = false;
+        fartButton.enabled = false;
 
         // Calculate elapsed time
         float elapsedTime = Time.time - startTime;
-        Debug.Log("Game finished. Elapsed Time: " + elapsedTime);
 
         // Determine star count based on time
         int starCount = 1; // Default to 1 star
@@ -123,56 +85,51 @@ public class GameManager : MonoBehaviour
 
         // Show stars based on the calculated star count
         ShowStars(starCount);
+
+        // Show the next level screen and buttons
+        ShowNextLevelScreen();
     }
 
     void ShowStars(int count)
     {
-        Debug.Log("Showing stars with count: " + count);
-
-        if (silverStars.Length == 0 || goldenStars.Length == 0)
-        {
-            Debug.LogError("Star arrays are not properly assigned.");
-            return;
-        }
-
         // Show silver stars
         foreach (var star in silverStars)
         {
-            if (star != null)
-            {
-                star.SetActive(true);
-            }
+            star.SetActive(true);
         }
 
         // Show golden stars based on count
         for (int i = 0; i < goldenStars.Length; i++)
         {
-            if (goldenStars[i] != null)
+            if (i < count)
             {
-                goldenStars[i].SetActive(i < count);
+                goldenStars[i].SetActive(true);
+            }
+            else
+            {
+                goldenStars[i].SetActive(false);
             }
         }
     }
 
     public void ShowNextLevelScreen()
     {
-        Invoke(nameof(ShowNextLevelScreenDelayed), 2f);
+        nextLevelScreen.SetActive(true);
+        restartButton.gameObject.SetActive(true);
+        nextLevelButton.gameObject.SetActive(true);
+        joystickPlayerExample.enabled = false;
+        fartPropulsion.enabled = false;
+        Time.timeScale = 0;
     }
 
-    void ShowNextLevelScreenDelayed()
+    public void ShowGameOverScreen()
     {
-        if (nextLevelScreen != null)
-        {
-            nextLevelScreen.SetActive(true);
-        }
-        if (joystickPlayerExample != null)
-        {
-            joystickPlayerExample.enabled = false;
-        }
-        if (fartPropulsion != null)
-        {
-            fartPropulsion.enabled = false;
-        }
+        nextLevelScreen.SetActive(true);
+        restartButton.gameObject.SetActive(true);
+        nextLevelButton.gameObject.SetActive(false); // Hide the next level button on game over
+        gameOverMessageText.text = "Try Again"; // Set the game over message
+        joystickPlayerExample.enabled = false;
+        fartPropulsion.enabled = false;
         Time.timeScale = 0;
     }
 

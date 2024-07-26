@@ -3699,6 +3699,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841341433}
   m_Mesh: {fileID: -5973882801852614384, guid: 9e2ede9444b0afe48b184a53ff32603e, type: 3}
+--- !u!198 &1843710971 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7868026802804975507, guid: 93db9d8a1bcb5dc43b729901b2346c25,
+    type: 3}
+  m_PrefabInstance: {fileID: 805199183309001610}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1882806149
 GameObject:
   m_ObjectHideFlags: 0
@@ -5091,6 +5097,11 @@ PrefabInstance:
       objectReference: {fileID: 1937921750}
     - target: {fileID: 3145353581152544280, guid: 93db9d8a1bcb5dc43b729901b2346c25,
         type: 3}
+      propertyPath: jumpParticles
+      value: 
+      objectReference: {fileID: 1843710971}
+    - target: {fileID: 3145353581152544280, guid: 93db9d8a1bcb5dc43b729901b2346c25,
+        type: 3}
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 726007732}
@@ -5149,6 +5160,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8651704839891407799, guid: 93db9d8a1bcb5dc43b729901b2346c25,
+        type: 3}
+      propertyPath: jumpParticles
+      value: 
+      objectReference: {fileID: 1843710971}
     - target: {fileID: 8651704839891407799, guid: 93db9d8a1bcb5dc43b729901b2346c25,
         type: 3}
       propertyPath: variableJoystick
@@ -6815,7 +6831,7 @@ PrefabInstance:
     - target: {fileID: 1404080528106885953, guid: 9aac861c83c55804d86b890c86ae2efc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.93
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 1404080528106885953, guid: 9aac861c83c55804d86b890c86ae2efc,
         type: 3}
@@ -6856,6 +6872,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 9108127199847520371, guid: 9aac861c83c55804d86b890c86ae2efc,
+        type: 3}
+      propertyPath: offset.z
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 9108127199847520371, guid: 9aac861c83c55804d86b890c86ae2efc,
         type: 3}

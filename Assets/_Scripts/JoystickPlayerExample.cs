@@ -12,7 +12,6 @@ public class JoystickPlayerExample : MonoBehaviour
 
     public float gravityScale = 2f;     // Adjust gravity scale for realistic fall
 
-    [SerializeField] private AudioSource audioSource;     // Reference to the AudioSource component
     public AudioClip fartSound;          // The fart sound clip
     public ParticleSystem jumpParticles; // Reference to the particle system
     public ParticleSystem dustParticles; // Reference to the dust particle system
@@ -27,7 +26,6 @@ public class JoystickPlayerExample : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;      // Ensure rotation is frozen to prevent unexpected behavior
         Physics.gravity = new Vector3(0, -9.81f, 0) * gravityScale; // Ensure gravity is set correctly
-        audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
         animator = GetComponent<Animator>(); // Get the Animator component
 
         // Store the original Y rotation of the player

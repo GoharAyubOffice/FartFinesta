@@ -5396,11 +5396,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f9d74883f8b094f478b44c1df6b93acc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b0d016a2c3a0dcb43b4ae88405c8daa0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5596,8 +5596,6 @@ MonoBehaviour:
   fartPower: 100
   playerPoints: 0
   gravityScale: 1
-  audioSource: {fileID: 0}
-  fartSound: {fileID: 0}
   jumpParticles: {fileID: 7868026802804975507}
   dustParticles: {fileID: 1330779002101939733}
 --- !u!114 &3145353581152544280
@@ -5616,7 +5614,6 @@ MonoBehaviour:
   fartPower: 100
   playerPoints: 0
   audioSource: {fileID: 1815463821322287331}
-  fartSound: {fileID: 8300000, guid: f9d74883f8b094f478b44c1df6b93acc, type: 3}
   jumpParticles: {fileID: 7868026802804975507}
   isGameOver: 0
   gameOverScreen: {fileID: 0}
@@ -5672,7 +5669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   starBurstPrefab: {fileID: 4591313650637563851, guid: d0b17a0d59a9bbf42a0fc4ad240904aa,
     type: 3}
-  fartPowerDecrease: 10
+  fartPowerDecrease: 5
   fart: {fileID: 0}
 --- !u!114 &9028146397478260491
 MonoBehaviour:

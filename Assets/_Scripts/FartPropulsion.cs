@@ -11,7 +11,6 @@ public class FartPropulsion : MonoBehaviour
     private const int maxFartPower = 100; // Maximum fart power
 
     [SerializeField] private AudioSource audioSource;     // Reference to the AudioSource component
-    public AudioClip fartSound;          // The fart sound clip
     public ParticleSystem jumpParticles; // Reference to the particle system
 
     public bool isGameOver = false;    // Track if the game is over
@@ -30,6 +29,9 @@ public class FartPropulsion : MonoBehaviour
 
         rb.mass = 1f; // Set to the desired mass for consistent jump
         Physics.gravity = new Vector3(0, -9.81f, 0) * 2f; // Ensure gravity is set correctly
+
+        // Ensure the audio source is set to loop
+        audioSource.loop = true;
     }
 
     void Update()
@@ -61,11 +63,13 @@ public class FartPropulsion : MonoBehaviour
         if (!isGameOver)
         {
             isHoldingJumpButton = true;
-            // Optionally, you might want to play sound or particles here
-            if (!audioSource.isPlaying)
-            {
-                audioSource.Play(); // Play the fart sound continuously
-            }
+
+            // Set the jump animation immediately
+            animator.SetBool("isJumping", true);
+            animator.SetBool("isFall", false);
+
+            // Ensure the rocket sound starts playing
+            PlayRocketSound();
         }
     }
 
@@ -74,11 +78,17 @@ public class FartPropulsion : MonoBehaviour
         if (!isGameOver)
         {
             isHoldingJumpButton = false;
+            // Stop the rocket sound
+            StopRocketSound();
+
             // Stop particle system when button is released
             if (jumpParticles.isPlaying)
             {
                 jumpParticles.Stop();
             }
+
+            // Set jump animation to false when the button is released
+            animator.SetBool("isJumping", false);
         }
     }
 
@@ -90,17 +100,14 @@ public class FartPropulsion : MonoBehaviour
             rb.AddForce(new Vector3(0, 50, 0) * continuousForce, ForceMode.Acceleration);
             rb.velocity *= 0.25f;
 
-            // Ensure audio plays continuously while holding
-            if (!audioSource.isPlaying)
-            {
-                audioSource.Play();
-            }
-
             // Play jump particles continuously
             if (!jumpParticles.isPlaying)
             {
                 jumpParticles.Play();
             }
+
+            // Ensure the rocket sound continues to play
+            PlayRocketSound();
 
             // Set isJumping to true
             animator.SetBool("isJumping", true);
@@ -180,6 +187,22 @@ public class FartPropulsion : MonoBehaviour
             {
                 collisionAudio.Play();
             }
+        }
+    }
+
+    private void PlayRocketSound()
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
+    }
+
+    private void StopRocketSound()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
         }
     }
 }

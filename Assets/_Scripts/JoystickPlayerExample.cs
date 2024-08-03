@@ -18,6 +18,8 @@ public class JoystickPlayerExample : MonoBehaviour
     private Animator animator;
     private float originalRotationY;
     private const float rotationAngle = 90f;
+    [SerializeField] private float rotationAngleMoveSpeed = 2f;
+
 
     public bool isWalking { get; private set; }
     private bool isGrounded;
@@ -55,7 +57,7 @@ public class JoystickPlayerExample : MonoBehaviour
         {
             // Return to the original rotation when not moving horizontally
             Quaternion targetRotation = Quaternion.Euler(0, originalRotationY, 0);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationAngleMoveSpeed);
         }
 
         // Control the dust particles emission based on movement

@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1128328564}
-  m_IndirectSpecularColor: {r: 0.056591675, g: 0.34178907, b: 0.9833995, a: 1}
+  m_IndirectSpecularColor: {r: 0.055771276, g: 0.34221834, b: 0.9833995, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -695,8 +695,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4277688, y: 12.351257, z: 12.351254}
-  m_Center: {x: -0.000015258789, y: -0.00000011920929, z: 0}
+  m_Size: {x: 0.4, y: 11.208542, z: 11.084528}
+  m_Center: {x: 8.1955706e-25, y: 0.18002129, z: 0.17760849}
 --- !u!114 &225570938 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8741472360727488298, guid: 8442382a3cd6c0e4f93f2a286608a77d,
@@ -1034,8 +1034,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4277687, y: 12.351254, z: 12.351254}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.4, y: 11.208542, z: 11.084528}
+  m_Center: {x: 8.1955706e-25, y: 0.18002129, z: 0.17760849}
 --- !u!1 &577635989
 GameObject:
   m_ObjectHideFlags: 0
@@ -3152,8 +3152,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4277687, y: 12.351254, z: 12.351254}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.4, y: 11.208542, z: 11.084528}
+  m_Center: {x: 8.1955706e-25, y: 0.18002129, z: 0.17760849}
 --- !u!114 &1598880854 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 323155424486343652, guid: 8442382a3cd6c0e4f93f2a286608a77d,
@@ -4273,8 +4273,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4277687, y: 12.351254, z: 12.351254}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.4, y: 11.208542, z: 11.084528}
+  m_Center: {x: 8.1955706e-25, y: 0.18002129, z: 0.17760849}
 --- !u!1 &2048954808
 GameObject:
   m_ObjectHideFlags: 0
@@ -4986,6 +4986,11 @@ PrefabInstance:
       propertyPath: variableJoystick
       value: 
       objectReference: {fileID: 1704546498}
+    - target: {fileID: 8651704839891407799, guid: 93db9d8a1bcb5dc43b729901b2346c25,
+        type: 3}
+      propertyPath: rotationAngleMoveSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6556,11 +6561,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 624912564036869196, guid: 8442382a3cd6c0e4f93f2a286608a77d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 663263406947530069, guid: 8442382a3cd6c0e4f93f2a286608a77d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -6686,11 +6686,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1508378257}
-    - target: {fileID: 8807228989229343780, guid: 8442382a3cd6c0e4f93f2a286608a77d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7340,8 +7335,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4277687, y: 12.351254, z: 12.351254}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.4, y: 11.208542, z: 11.084528}
+  m_Center: {x: 8.1955706e-25, y: 0.18002129, z: 0.17760849}
 --- !u!4 &8975823800821289782
 Transform:
   m_ObjectHideFlags: 0

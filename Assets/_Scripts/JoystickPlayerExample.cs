@@ -12,7 +12,6 @@ public class JoystickPlayerExample : MonoBehaviour
 
     public float gravityScale = 2f;
 
-    public AudioClip fartSound;
     public ParticleSystem jumpParticles;
     public ParticleSystem dustParticles;
     private Animator animator;

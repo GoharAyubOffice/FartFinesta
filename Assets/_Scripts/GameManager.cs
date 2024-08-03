@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     private bool isGameFinished = false;
     private float startTime;
 
+    [SerializeField] private int targetFrameRate = 60;
+
     void Start()
     {
         joystickPlayerExample = player.GetComponent<JoystickPlayerExample>();
@@ -36,10 +38,15 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 0;
         startTime = Time.time; // Initialize timer
+
+        Application.targetFrameRate = 60;
     }
 
     void Update()
     {
+
+        Application.targetFrameRate = 60;
+
         if (!isGameFinished)
         {
             float elapsedTime = Time.time - startTime;
@@ -58,6 +65,12 @@ public class GameManager : MonoBehaviour
         joystickPlayerExample.enabled = true;
         fartPropulsion.enabled = true;
         Time.timeScale = 1;
+
+        // Set the target frame rate for the game
+        Application.targetFrameRate = targetFrameRate;
+
+        // Optionally, you can also adjust the VSync settings
+        QualitySettings.vSyncCount = 0; // 0 means don't sync to VBlank
     }
 
     public void FinishGame()

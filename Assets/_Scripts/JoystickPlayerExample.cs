@@ -2,7 +2,7 @@
 
 public class JoystickPlayerExample : MonoBehaviour
 {
-    public float speed = 20f;  // Ensure this is set to the correct default value
+    public float speed = 20f;
     public VariableJoystick variableJoystick;
     public Rigidbody rb;
 
@@ -10,39 +10,34 @@ public class JoystickPlayerExample : MonoBehaviour
     public int fartPower = 1;
     public int playerPoints = 0;
 
-    public float gravityScale = 2f;     // Adjust gravity scale for realistic fall
+    public float gravityScale = 2f;
 
-    public AudioClip fartSound;          // The fart sound clip
-    public ParticleSystem jumpParticles; // Reference to the particle system
-    public ParticleSystem dustParticles; // Reference to the dust particle system
-    private Animator animator;           // Reference to the Animator component
-    private float originalRotationY;     // Store the original Y rotation of the player
-    private const float rotationAngle = 90f; // Angle to rotate for left/right movement
-    public bool isWalking { get; private set; } // Track if the player is walking
+    public AudioClip fartSound;
+    public ParticleSystem jumpParticles;
+    public ParticleSystem dustParticles;
+    private Animator animator;
+    private float originalRotationY;
+    private const float rotationAngle = 90f;
 
+    public bool isWalking { get; private set; }
+    private bool isGrounded;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.freezeRotation = true;      // Ensure rotation is frozen to prevent unexpected behavior
-        Physics.gravity = new Vector3(0, -9.81f, 0) * gravityScale; // Ensure gravity is set correctly
-        animator = GetComponent<Animator>(); // Get the Animator component
+        rb.freezeRotation = true;
+        Physics.gravity = new Vector3(0, -9.81f, 0) * gravityScale;
+        animator = GetComponent<Animator>();
 
-        // Store the original Y rotation of the player
         originalRotationY = transform.eulerAngles.y;
-
-        // Create a separate AudioSource for the walking sound
-
         isWalking = true;
-
-        Debug.Log("JoystickPlayerExample initialized with speed: " + speed + ", gravityScale: " + gravityScale);
     }
 
     void Update()
     {
-        // Update animator with movement state only for horizontal movement
-        isWalking = Mathf.Abs(variableJoystick.Horizontal) > 0.1f; // Adjust threshold as needed
-        animator.SetBool("isWalking", isWalking); // Assumes the Animator has a boolean parameter named "isWalking"
+        // Determine if the player is walking
+        isWalking = Mathf.Abs(variableJoystick.Horizontal) > 0.1f;
+        animator.SetBool("isWalking", isWalking);
 
         // Rotate the player based on the joystick input
         if (isWalking)
@@ -66,6 +61,10 @@ public class JoystickPlayerExample : MonoBehaviour
         // Control the dust particles emission based on movement
         var emission = dustParticles.emission;
         emission.enabled = isWalking;
+
+        // Check if player is grounded
+        isGrounded = IsGrounded();
+        animator.SetBool("isGrounded", isGrounded);
     }
 
     void FixedUpdate()
@@ -79,5 +78,11 @@ public class JoystickPlayerExample : MonoBehaviour
     {
         // Rotate the player around the Y-axis
         transform.rotation = Quaternion.Euler(0, originalRotationY + angle, 0);
+    }
+
+    private bool IsGrounded()
+    {
+        // Check if the player is grounded using a raycast
+        return Physics.Raycast(transform.position, Vector3.down, 0.2f);
     }
 }

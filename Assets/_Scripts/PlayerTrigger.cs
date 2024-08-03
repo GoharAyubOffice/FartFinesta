@@ -14,38 +14,89 @@ public class PlayerTrigger : MonoBehaviour
 
     public GameManager gameManager;
 
-
     void Start()
     {
-        playerAnimator = GetComponent<Animator>(); // Get the Animator component
+        playerAnimator = GetComponent<Animator>();
         player = GetComponent<Transform>();
         audioSource = GetComponent<AudioSource>();
 
-        // Ensure the finish UI is initially inactive
-        finishUI.SetActive(false);
+        if (finishUI != null)
+        {
+            // Ensure the finish UI is initially inactive
+            finishUI.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("Finish UI GameObject is not assigned.");
+        }
+
+        if (congratsText == null)
+        {
+            Debug.LogError("CongratsText is not assigned.");
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("finish"))
         {
-            // Stop player movement (assuming you have a script controlling movement)
-            GetComponent<JoystickPlayerExample>().enabled = false; // Disable movement script
-            GetComponent<FartPropulsion>().enabled = false;
+            // Stop player movement
+            var joystickPlayer = GetComponent<JoystickPlayerExample>();
+            if (joystickPlayer != null)
+            {
+                joystickPlayer.enabled = false;
+            }
+            else
+            {
+                Debug.LogWarning("JoystickPlayerExample script not found.");
+            }
+
+            var fartPropulsion = GetComponent<FartPropulsion>();
+            if (fartPropulsion != null)
+            {
+                fartPropulsion.enabled = false;
+            }
+            else
+            {
+                Debug.LogWarning("FartPropulsion script not found.");
+            }
 
             // Set the win animation
-            playerAnimator.SetTrigger("Win");
-            playerAnimator.SetBool("isWalking", false);
+            if (playerAnimator != null)
+            {
+                playerAnimator.SetTrigger("Win");
+                playerAnimator.SetBool("isWalking", false);
+            }
+            else
+            {
+                Debug.LogError("Player Animator is not assigned.");
+            }
 
-            gameManager.FinishGame();
+            if (gameManager != null)
+            {
+                gameManager.FinishGame();
+            }
+            else
+            {
+                Debug.LogError("GameManager is not assigned.");
+            }
 
             // Play the clapping sound
-            audioSource.PlayOneShot(clappingSound);
+            if (audioSource != null && clappingSound != null)
+            {
+                audioSource.PlayOneShot(clappingSound);
+            }
+            else
+            {
+                Debug.LogError("AudioSource or clappingSound is not assigned.");
+            }
 
             // Start coroutine to show finish UI after a delay
-            StartCoroutine(ShowFinishUIAfterDelay(2f)); // Adjust the delay as needed
+            StartCoroutine(ShowFinishUIAfterDelay(1f)); // Adjust the delay as needed
 
-            Debug.Log("Game Over - Player reached the finish point!");
+            congratsText.text = "Congratulations!";
+
+            Debug.Log("Player reached the finish point!");
         }
     }
 
@@ -54,20 +105,22 @@ public class PlayerTrigger : MonoBehaviour
         // Wait for the specified delay
         yield return new WaitForSeconds(delay);
 
-        // Activate the finish UI
-        finishUI.SetActive(true);
-
-        // Update the points and congratulations text
-        congratsText.text = "Congratulations!";
+        if (finishUI != null)
+        {
+            // Activate the finish UI
+            finishUI.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("Finish UI is not assigned.");
+        }
     }
 
-    // This function will be called when the next level button is clicked
     public void OnNextLevelButtonClicked()
     {
         // Load the next level
         string currentSceneName = SceneManager.GetActiveScene().name;
-        int currentLevelNumber;
-        if (int.TryParse(currentSceneName, out currentLevelNumber))
+        if (int.TryParse(currentSceneName, out int currentLevelNumber))
         {
             string nextLevelName = (currentLevelNumber + 1).ToString();
             if (Application.CanStreamedLevelBeLoaded(nextLevelName))
@@ -85,7 +138,6 @@ public class PlayerTrigger : MonoBehaviour
         }
     }
 
-    // This function will be called when the restart button is clicked
     public void OnRestartButtonClicked()
     {
         // Reload the current scene

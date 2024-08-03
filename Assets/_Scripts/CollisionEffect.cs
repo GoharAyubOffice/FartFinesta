@@ -15,7 +15,7 @@ public class CollisionEffect : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Traps") || (collision.gameObject.CompareTag("Obstacle"))) // Change "Obstacle" to whatever tag your obstacles have
+        if (collision.gameObject.CompareTag("Traps")) // Change "Traps" to whatever tag your obstacles have
         {
             // Instantiate star burst effect at the collision point
             GameObject starBurst = Instantiate(starBurstPrefab, collision.contacts[0].point, Quaternion.identity);
@@ -30,6 +30,12 @@ public class CollisionEffect : MonoBehaviour
             // Destroy the star burst after 1 second
             Destroy(starBurst, 1f);
         }
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            GameObject starBurst = Instantiate(starBurstPrefab, collision.contacts[0].point, Quaternion.identity);
+            Destroy(starBurst, 1f);
+        }
+
     }
 
     void OnTriggerEnter(Collider other)

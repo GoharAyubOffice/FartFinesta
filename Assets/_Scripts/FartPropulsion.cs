@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.EventSystems; // Make sure this is included for UI interaction
+using UnityEngine.EventSystems;
 
 public class FartPropulsion : MonoBehaviour
 {
@@ -21,6 +21,9 @@ public class FartPropulsion : MonoBehaviour
 
     private bool isHoldingJumpButton = false;
 
+    public float normalGravityScale = 2f; // Gravity scale for normal gameplay
+    public float fallGravityScale = 5f;   // Gravity scale for faster falling
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -28,7 +31,7 @@ public class FartPropulsion : MonoBehaviour
         animator = GetComponent<Animator>(); // Get the Animator component
 
         rb.mass = 1f; // Set to the desired mass for consistent jump
-        Physics.gravity = new Vector3(0, -9.81f, 0) * 2f; // Ensure gravity is set correctly
+        Physics.gravity = new Vector3(0, -9.81f, 0) * normalGravityScale; // Set normal gravity
 
         // Ensure the audio source is set to loop
         audioSource.loop = true;
@@ -41,17 +44,19 @@ public class FartPropulsion : MonoBehaviour
             GameOver();
         }
 
-        // Update animator parameters
-        if (!IsGrounded() && rb.velocity.y < 0)
+        // Check if the player is falling
+        bool isFalling = !IsGrounded() && rb.velocity.y < 0;
+
+        if (isFalling)
         {
-            animator.SetBool("isFall", true);
-        }
-        if (IsGrounded())
-        {
-            animator.SetBool("isFall", false);
+            // Apply fall gravity when falling
+            rb.AddForce(Vector3.down * (fallGravityScale - normalGravityScale) * 9.81f, ForceMode.Acceleration);
         }
 
-        // Apply continuous force while holding the button
+        // Update animator parameters
+        animator.SetBool("isFalling", isFalling);
+
+        // Apply continuous force while holding the jump button
         if (isHoldingJumpButton && !isGameOver)
         {
             ApplyContinuousFartForce();
@@ -66,7 +71,7 @@ public class FartPropulsion : MonoBehaviour
 
             // Set the jump animation immediately
             animator.SetBool("isJumping", true);
-            animator.SetBool("isFall", false);
+            animator.SetBool("isFalling", false);
 
             // Ensure the rocket sound starts playing
             PlayRocketSound();
@@ -111,7 +116,7 @@ public class FartPropulsion : MonoBehaviour
 
             // Set isJumping to true
             animator.SetBool("isJumping", true);
-            animator.SetBool("isFall", false);
+            animator.SetBool("isFalling", false);
 
             // Decrease fart power over time while holding
             DecreaseFartPower(Time.deltaTime * 5);
@@ -130,7 +135,7 @@ public class FartPropulsion : MonoBehaviour
         {
             // Set isJumping and isFalling to false when the player lands on the ground
             animator.SetBool("isJumping", false);
-            animator.SetBool("isFall", false);
+            animator.SetBool("isFalling", false);
         }
     }
 

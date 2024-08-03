@@ -5596,6 +5596,7 @@ MonoBehaviour:
   fartPower: 100
   playerPoints: 0
   gravityScale: 1
+  fartSound: {fileID: 0}
   jumpParticles: {fileID: 7868026802804975507}
   dustParticles: {fileID: 1330779002101939733}
 --- !u!114 &3145353581152544280
@@ -5617,6 +5618,8 @@ MonoBehaviour:
   jumpParticles: {fileID: 7868026802804975507}
   isGameOver: 0
   gameOverScreen: {fileID: 0}
+  normalGravityScale: 2
+  fallGravityScale: 3
 --- !u!114 &2397365441073779806
 MonoBehaviour:
   m_ObjectHideFlags: 0

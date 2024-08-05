@@ -177,7 +177,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d694d48d9176449d89a36fc7fdca3663, type: 2}
+  - {fileID: 2100000, guid: 05b345e7d47957f42b628ea892be7f0e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5598,7 +5598,6 @@ MonoBehaviour:
   gravityScale: 1
   jumpParticles: {fileID: 7868026802804975507}
   dustParticles: {fileID: 1330779002101939733}
-  rotationAngleMoveSpeed: 15
 --- !u!114 &3145353581152544280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5618,6 +5617,7 @@ MonoBehaviour:
   jumpParticles: {fileID: 7868026802804975507}
   isGameOver: 0
   gameOverScreen: {fileID: 0}
+  animator: {fileID: 6158490378767705839}
   normalGravityScale: 2
   fallGravityScale: 3
 --- !u!114 &2397365441073779806
@@ -5794,7 +5794,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d694d48d9176449d89a36fc7fdca3663, type: 2}
+  - {fileID: 2100000, guid: 05b345e7d47957f42b628ea892be7f0e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

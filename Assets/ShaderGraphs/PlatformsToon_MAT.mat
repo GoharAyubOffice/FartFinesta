@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Toon
+  m_Name: PlatformsToon_MAT
   m_Shader: {fileID: -6465566751694194690, guid: 1afed73e711e7431bb9f202123fd418d,
     type: 3}
   m_Parent: {fileID: 0}
@@ -25,7 +25,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - MainTex:
-        m_Texture: {fileID: 2800000, guid: 44ded447dc09f324cb2936075985176f, type: 3}
+        m_Texture: {fileID: 2800000, guid: c052475533dbdfd46bd885d80728c85d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Mask_R_Emission:
@@ -90,10 +90,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Brightness_Rim: 1.59
-    - Rim_Power: 0.13
+    - Brightness_Rim: 2
+    - Rim_Power: 5
     - Toon_Ramp_Offset: 0.5
-    - Toon_Ramp_Smoothness: 0.155
+    - Toon_Ramp_Smoothness: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
@@ -132,7 +132,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &1553154588081692163
+--- !u!114 &6750640246386231112
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

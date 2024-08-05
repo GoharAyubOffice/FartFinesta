@@ -17,7 +17,7 @@ public class FartPropulsion : MonoBehaviour
 
     public GameObject gameOverScreen; // Reference to the game over UI
 
-    private Animator animator;           // Reference to the Animator component
+    [SerializeField] private Animator animator;           // Reference to the Animator component
 
     private bool isHoldingJumpButton = false;
 

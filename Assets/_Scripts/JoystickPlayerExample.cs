@@ -16,9 +16,7 @@ public class JoystickPlayerExample : MonoBehaviour
     public ParticleSystem dustParticles;
     private Animator animator;
     private float originalRotationY;
-    private const float rotationAngle = 90f;
-    [SerializeField] private float rotationAngleMoveSpeed = 2f;
-
+    private const float rotationAngle = 90f; // Rotation angle for left/right movement
 
     public bool isWalking { get; private set; }
     private bool isGrounded;
@@ -31,7 +29,7 @@ public class JoystickPlayerExample : MonoBehaviour
         animator = GetComponent<Animator>();
 
         originalRotationY = transform.eulerAngles.y;
-        isWalking = true;
+        isWalking = false;
     }
 
     void Update()
@@ -40,7 +38,7 @@ public class JoystickPlayerExample : MonoBehaviour
         isWalking = Mathf.Abs(variableJoystick.Horizontal) > 0.1f;
         animator.SetBool("isWalking", isWalking);
 
-        // Rotate the player based on the joystick input
+        // Calculate and set target rotation
         if (isWalking)
         {
             if (variableJoystick.Horizontal > 0)
@@ -54,9 +52,8 @@ public class JoystickPlayerExample : MonoBehaviour
         }
         else
         {
-            // Return to the original rotation when not moving horizontally
-            Quaternion targetRotation = Quaternion.Euler(0, originalRotationY, 0);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationAngleMoveSpeed);
+            // Directly return to the original rotation when not moving horizontally
+            transform.rotation = Quaternion.Euler(0, originalRotationY, 0);
         }
 
         // Control the dust particles emission based on movement

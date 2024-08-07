@@ -14,11 +14,11 @@ public class JumpPad : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player"))
         {
-            Rigidbody playerRb = other.GetComponent<Rigidbody>();
+            Rigidbody playerRb = collision.collider.GetComponent<Rigidbody>();
             if (playerRb != null)
             {
                 // Apply a force to the player's rigidbody

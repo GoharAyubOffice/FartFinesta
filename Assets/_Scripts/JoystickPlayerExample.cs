@@ -19,7 +19,7 @@ public class JoystickPlayerExample : MonoBehaviour
     private const float rotationAngle = 90f; // Rotation angle for left/right movement
 
     public bool isWalking { get; private set; }
-    private bool isGrounded;
+    [SerializeField] private bool isGrounded;
 
     void Start()
     {

@@ -20,6 +20,7 @@ public class JoystickPlayerExample : MonoBehaviour
 
     public bool isWalking { get; private set; }
     [SerializeField] private bool isGrounded;
+    [SerializeField] private float isGroundedTransform;
 
     void Start()
     {
@@ -81,6 +82,6 @@ public class JoystickPlayerExample : MonoBehaviour
     private bool IsGrounded()
     {
         // Check if the player is grounded using a raycast
-        return Physics.Raycast(transform.position, Vector3.down, 0.2f);
+        return Physics.Raycast(transform.position, Vector3.down, isGroundedTransform);
     }
 }

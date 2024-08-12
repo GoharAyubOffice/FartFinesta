@@ -219,7 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6990016695532165490}
   - component: {fileID: 2355479620684464254}
-  - component: {fileID: 6864692810065030702}
+  - component: {fileID: 2689104706137478060}
   - component: {fileID: 6321490659259121995}
   - component: {fileID: 2854060756278044439}
   - component: {fileID: 3777608992629686900}
@@ -274,8 +274,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!65 &6864692810065030702
-BoxCollider:
+--- !u!136 &2689104706137478060
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -292,9 +292,11 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.2802515, y: 0.45898077, z: 0.44931984}
-  m_Center: {x: -0.007245829, y: 0.20771295, z: 0.0048305197}
+  serializedVersion: 2
+  m_Radius: 0.20487607
+  m_Height: 0.5098161
+  m_Direction: 1
+  m_Center: {x: 0.014071524, y: 0.23883808, z: -0.026693782}
 --- !u!54 &6321490659259121995
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -440,6 +442,7 @@ MonoBehaviour:
     type: 3}
   dustParticles: {fileID: 7700027631441733719}
   isGrounded: 0
+  isGroundedTransform: 0.1
 --- !u!114 &4624051880060830946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,7 +458,7 @@ MonoBehaviour:
   continuousForce: 5
   fartPower: 100
   playerPoints: 0
-  audioSource: {fileID: 2854060756278044439}
+  audioSource: {fileID: 0}
   jumpParticles: {fileID: 5747118913466287692, guid: 7b408e6c73b54e044a1a355d04cefc7b,
     type: 3}
   isGameOver: 0

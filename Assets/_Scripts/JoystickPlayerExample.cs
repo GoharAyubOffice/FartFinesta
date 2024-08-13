@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class JoystickPlayerExample : MonoBehaviour
 {
@@ -17,10 +18,17 @@ public class JoystickPlayerExample : MonoBehaviour
     private Animator animator;
     private float originalRotationY;
     private const float rotationAngle = 90f; // Rotation angle for left/right movement
+    [SerializeField] private float rotationTransitionSpeed = 5f; // Speed of rotation transition
 
     public bool isWalking { get; private set; }
     [SerializeField] private bool isGrounded;
     [SerializeField] private float isGroundedTransform;
+
+    [SerializeField] private AudioSource audioSource;
+    public float footStepSoundVolume = 1.5f;
+    public AudioClip footStepSound;   // Sound for footstep
+
+    private bool isPlayingFootstep = false; // To prevent overlapping sounds
 
     void Start()
     {
@@ -31,12 +39,24 @@ public class JoystickPlayerExample : MonoBehaviour
 
         originalRotationY = transform.eulerAngles.y;
         isWalking = false;
+
+        audioSource.volume = footStepSoundVolume; // Set the footstep sound volume
     }
 
     void Update()
     {
         // Determine if the player is walking
         isWalking = Mathf.Abs(variableJoystick.Horizontal) > 0.1f;
+
+        if (isWalking && isGrounded && !isPlayingFootstep)
+        {
+            PlayFootstepSound(); // Play footstep sound when walking
+        }
+        else if (!isWalking || !isGrounded)
+        {
+            StopFootstepSound(); // Stop the sound when not walking or in the air
+        }
+
         animator.SetBool("isWalking", isWalking);
 
         // Calculate and set target rotation
@@ -53,8 +73,9 @@ public class JoystickPlayerExample : MonoBehaviour
         }
         else
         {
-            // Directly return to the original rotation when not moving horizontally
-            transform.rotation = Quaternion.Euler(0, originalRotationY, 0);
+            // Smoothly transition to the original rotation when not moving horizontally
+            Quaternion targetRotation = Quaternion.Euler(0, originalRotationY, 0);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationTransitionSpeed);
         }
 
         // Control the dust particles emission based on movement
@@ -83,5 +104,25 @@ public class JoystickPlayerExample : MonoBehaviour
     {
         // Check if the player is grounded using a raycast
         return Physics.Raycast(transform.position, Vector3.down, isGroundedTransform);
+    }
+
+    private void PlayFootstepSound()
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.clip = footStepSound;
+            audioSource.loop = true; // Loop the footstep sound
+            audioSource.Play();
+            isPlayingFootstep = true;
+        }
+    }
+
+    private void StopFootstepSound()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+            isPlayingFootstep = false;
+        }
     }
 }

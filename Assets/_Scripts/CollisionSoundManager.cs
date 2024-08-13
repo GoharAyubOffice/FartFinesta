@@ -6,18 +6,13 @@ public class CollisionSoundManager : MonoBehaviour
     public AudioClip collectSound; // Sound for bean collection
     public AudioClip hitSound; // Sound for bean collection
 
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
 
     // Volume multipliers for each sound type
     public float thudVolume = 1.5f;
     public float splatVolume = 1.0f;
     public float collectVolume = 1.0f;
     public float hitVolume = 1.0f;
-
-    void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
 
     void OnCollisionEnter(Collision collision)
     {

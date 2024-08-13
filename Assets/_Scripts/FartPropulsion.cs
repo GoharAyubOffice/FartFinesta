@@ -24,10 +24,11 @@ public class FartPropulsion : MonoBehaviour
     public float normalGravityScale = 2f; // Gravity scale for normal gameplay
     public float fallGravityScale = 5f;   // Gravity scale for faster falling
 
+    private bool isFlying = false; // Track if the player is currently flying
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
         animator = GetComponent<Animator>(); // Get the Animator component
 
         rb.mass = 1f; // Set to the desired mass for consistent jump
@@ -51,6 +52,19 @@ public class FartPropulsion : MonoBehaviour
         {
             // Apply fall gravity when falling
             rb.AddForce(Vector3.down * (fallGravityScale - normalGravityScale) * 9.81f, ForceMode.Acceleration);
+
+            // Start playing the fly sound only if it's not already playing
+            if (!isFlying)
+            {
+                PlayRocketSound();
+                isFlying = true;
+            }
+        }
+        else if (IsGrounded())
+        {
+            // Stop the rocket sound when grounded
+            StopRocketSound();
+            isFlying = false; // Reset flying state
         }
 
         // Update animator parameters
@@ -74,7 +88,11 @@ public class FartPropulsion : MonoBehaviour
             animator.SetBool("isFalling", false);
 
             // Ensure the rocket sound starts playing
-            PlayRocketSound();
+            if (!isFlying)
+            {
+                PlayRocketSound();
+                isFlying = true;
+            }
         }
     }
 
@@ -83,8 +101,6 @@ public class FartPropulsion : MonoBehaviour
         if (!isGameOver)
         {
             isHoldingJumpButton = false;
-            // Stop the rocket sound
-            StopRocketSound();
 
             // Stop particle system when button is released
             if (jumpParticles.isPlaying)
@@ -112,7 +128,11 @@ public class FartPropulsion : MonoBehaviour
             }
 
             // Ensure the rocket sound continues to play
-            PlayRocketSound();
+            if (!isFlying)
+            {
+                PlayRocketSound();
+                isFlying = true;
+            }
 
             // Set isJumping to true
             animator.SetBool("isJumping", true);
@@ -126,16 +146,20 @@ public class FartPropulsion : MonoBehaviour
     private bool IsGrounded()
     {
         // Check if the player is grounded using a raycast
-        return Physics.Raycast(transform.position, Vector3.down, 0.2f);
+        return Physics.Raycast(transform.position, Vector3.down, 0.2f);        
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Obstacle"))
+        if (collision.gameObject.CompareTag("Obstacle") || IsGrounded())
         {
             // Set isJumping and isFalling to false when the player lands on the ground
             animator.SetBool("isJumping", false);
             animator.SetBool("isFalling", false);
+
+            // Stop the rocket sound when the player lands on the ground
+            StopRocketSound();
+            isFlying = false; // Reset flying state
         }
     }
 

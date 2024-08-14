@@ -74,8 +74,7 @@ public class JoystickPlayerExample : MonoBehaviour
         else
         {
             // Smoothly transition to the original rotation when not moving horizontally
-            Quaternion targetRotation = Quaternion.Euler(0, originalRotationY, 0);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationTransitionSpeed);
+            transform.rotation = Quaternion.Euler(0, originalRotationY, 0);
         }
 
         // Control the dust particles emission based on movement

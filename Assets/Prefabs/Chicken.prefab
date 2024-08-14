@@ -52,7 +52,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 586645097001841572, guid: fb02def1b6bea494c9dfa1379bff02c2, type: 3}
+  - {fileID: 2100000, guid: 05b345e7d47957f42b628ea892be7f0e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -347,7 +347,7 @@ MonoBehaviour:
   jumpParticles: {fileID: 5747118913466287692, guid: 7b408e6c73b54e044a1a355d04cefc7b,
     type: 3}
   dustParticles: {fileID: 7700027631441733719}
-  rotationTransitionSpeed: 5
+  rotationTransitionSpeed: 10
   isGrounded: 0
   isGroundedTransform: 0.1
   audioSource: {fileID: 5985313114704065516}
@@ -1077,8 +1077,8 @@ Transform:
   m_GameObject: {fileID: 4771655620483014705}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.029333334, z: -0.10633334}
-  m_LocalScale: {x: 1.0438, y: 1.0438, z: 1.0438}
+  m_LocalPosition: {x: 0, y: 0.029333334, z: -0.132}
+  m_LocalScale: {x: 1.2242875, y: 1.2242875, z: 1.2242875}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6990016695532165490}
@@ -1715,7 +1715,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 24.58
+    angle: 23.3
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -1801,7 +1801,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.05
+      value: 0.08
       mode: 0
       spread: 0
       speed:

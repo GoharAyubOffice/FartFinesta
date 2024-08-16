@@ -137,9 +137,7 @@ PlayerSettings:
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
   bundleVersion: 1
-  preloadedAssets:
-  - {fileID: -4263930841910940574, guid: aef80a9e6fb3448e7832d38478166e8a, type: 2}
-  - {fileID: 11400000, guid: 2f744c6eb129ca44a9f6cd41e1e0e1de, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -838,7 +836,7 @@ PlayerSettings:
     PS5: UNITY_POST_PROCESSING_STACK_V2
     QNX: UNITY_POST_PROCESSING_STACK_V2
     Stadia: UNITY_POST_PROCESSING_STACK_V2
-    Standalone: UNITY_POST_PROCESSING_STACK_V2
+    Standalone: UNITY_POST_PROCESSING_STACK_V2;LEVELPLAY_DEPENDENCIES_INSTALLED
     VisionOS: UNITY_POST_PROCESSING_STACK_V2
     WebGL: UNITY_POST_PROCESSING_STACK_V2;LEVELPLAY_DEPENDENCIES_INSTALLED
     XboxOne: UNITY_POST_PROCESSING_STACK_V2

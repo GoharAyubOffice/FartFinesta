@@ -7,18 +7,11 @@ public class JoystickPlayerExample : MonoBehaviour
     public VariableJoystick variableJoystick;
     public Rigidbody rb;
 
-    public static bool isInParticleCollision = false;
-    public int fartPower = 1;
-    public int playerPoints = 0;
-
-    public float gravityScale = 2f;
-
     public ParticleSystem jumpParticles;
     public ParticleSystem dustParticles;
     private Animator animator;
     private float originalRotationY;
     private const float rotationAngle = 90f; // Rotation angle for left/right movement
-    [SerializeField] private float rotationTransitionSpeed = 5f; // Speed of rotation transition
 
     public bool isWalking { get; private set; }
     [SerializeField] private bool isGrounded;
@@ -29,6 +22,7 @@ public class JoystickPlayerExample : MonoBehaviour
     public AudioClip footStepSound;   // Sound for footstep
 
     private bool isPlayingFootstep = false; // To prevent overlapping sounds
+    [SerializeField] private float gravityScale;
 
     void Start()
     {
@@ -57,9 +51,13 @@ public class JoystickPlayerExample : MonoBehaviour
             StopFootstepSound(); // Stop the sound when not walking or in the air
         }
 
-        animator.SetBool("isWalking", isWalking);
+        // Check if the jump button was pressed and the player is grounded
+        if (isGrounded && animator.GetBool("isJumping"))
+        {
+            animator.SetBool("isJumping", false);
+        }
 
-        // Calculate and set target rotation
+        // Handle rotation when walking
         if (isWalking)
         {
             if (variableJoystick.Horizontal > 0)
@@ -73,15 +71,16 @@ public class JoystickPlayerExample : MonoBehaviour
         }
         else
         {
-            // Smoothly transition to the original rotation when not moving horizontally
-            transform.rotation = Quaternion.Euler(0, originalRotationY, 0);
+            // Smoothly transition back to the original rotation when not moving horizontally
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, originalRotationY, 0), Time.deltaTime * 10f);
         }
 
         // Control the dust particles emission based on movement
         var emission = dustParticles.emission;
         emission.enabled = isWalking;
 
-        // Check if player is grounded
+        // Update animator parameters
+        animator.SetBool("isWalking", isWalking);
         isGrounded = IsGrounded();
         animator.SetBool("isGrounded", isGrounded);
     }
@@ -99,6 +98,25 @@ public class JoystickPlayerExample : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, originalRotationY + angle, 0);
     }
 
+    public void OnJumpButtonDown(BaseEventData eventData)
+    {
+        if (isGrounded)
+        {
+            // Set the jump animation and make sure it overrides the walking animation
+            animator.SetBool("isJumping", true);
+            animator.SetBool("isWalking", false);
+
+            // Apply the jump force
+            rb.AddForce(Vector3.up * 10f, ForceMode.VelocityChange);
+        }
+    }
+
+    public void OnJumpButtonUp(BaseEventData eventData)
+    {
+        // Reset jumping state when the button is released
+        animator.SetBool("isJumping", false);
+    }
+
     private bool IsGrounded()
     {
         // Check if the player is grounded using a raycast
@@ -107,21 +125,15 @@ public class JoystickPlayerExample : MonoBehaviour
 
     private void PlayFootstepSound()
     {
-        if (!audioSource.isPlaying)
-        {
-            audioSource.clip = footStepSound;
-            audioSource.loop = true; // Loop the footstep sound
-            audioSource.Play();
-            isPlayingFootstep = true;
-        }
+        audioSource.clip = footStepSound;
+        audioSource.loop = true; // Loop the footstep sound
+        audioSource.Play();
+        isPlayingFootstep = true;
     }
 
     private void StopFootstepSound()
     {
-        if (audioSource.isPlaying)
-        {
-            audioSource.Stop();
-            isPlayingFootstep = false;
-        }
+        audioSource.Stop();
+        isPlayingFootstep = false;
     }
 }

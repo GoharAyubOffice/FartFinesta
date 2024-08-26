@@ -51,12 +51,6 @@ public class JoystickPlayerExample : MonoBehaviour
             StopFootstepSound(); // Stop the sound when not walking or in the air
         }
 
-        // Check if the jump button was pressed and the player is grounded
-        if (isGrounded && animator.GetBool("isJumping"))
-        {
-            animator.SetBool("isJumping", false);
-        }
-
         // Handle rotation when walking
         if (isWalking)
         {
@@ -80,9 +74,18 @@ public class JoystickPlayerExample : MonoBehaviour
         emission.enabled = isWalking;
 
         // Update animator parameters
-        animator.SetBool("isWalking", isWalking);
         isGrounded = IsGrounded();
         animator.SetBool("isGrounded", isGrounded);
+
+        // If the player is jumping, disable the walking animation
+        if (animator.GetBool("isJumping"))
+        {
+            animator.SetBool("isWalking", false);
+        }
+        else
+        {
+            animator.SetBool("isWalking", isWalking);
+        }
     }
 
     void FixedUpdate()
@@ -108,6 +111,12 @@ public class JoystickPlayerExample : MonoBehaviour
 
             // Apply the jump force
             rb.AddForce(Vector3.up * 10f, ForceMode.VelocityChange);
+
+            // Play jump particles
+            if (jumpParticles != null)
+            {
+                jumpParticles.Play();
+            }
         }
     }
 

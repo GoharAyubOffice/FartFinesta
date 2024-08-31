@@ -44,15 +44,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-
-        Application.targetFrameRate = 60;
-
-        if (!isGameFinished)
+        if (!isGameFinished && !UIManager.isPaused) // Check if the game is not paused
         {
             float elapsedTime = Time.time - startTime;
             timerText.text = "Time: " + Mathf.Round(elapsedTime).ToString();
 
-            if (Input.touchCount > 0)
+            if (Input.touchCount > 0 && Time.timeScale == 0) // Start game only if it's paused
             {
                 StartGame();
             }
@@ -66,10 +63,7 @@ public class GameManager : MonoBehaviour
         fartPropulsion.enabled = true;
         Time.timeScale = 1;
 
-        // Set the target frame rate for the game
         Application.targetFrameRate = targetFrameRate;
-
-        // Optionally, you can also adjust the VSync settings
         QualitySettings.vSyncCount = 0; // 0 means don't sync to VBlank
     }
 
@@ -132,6 +126,7 @@ public class GameManager : MonoBehaviour
         nextLevelButton.gameObject.SetActive(true);
         joystickPlayerExample.enabled = false;
         fartPropulsion.enabled = false;
+        UIManager.isPaused = true; // Set the global pause state
         Time.timeScale = 0;
     }
 
@@ -143,6 +138,7 @@ public class GameManager : MonoBehaviour
         gameOverMessageText.text = "Try Again"; // Set the game over message
         joystickPlayerExample.enabled = false;
         fartPropulsion.enabled = false;
+        UIManager.isPaused = true; // Set the global pause state
         Time.timeScale = 0;
     }
 
@@ -150,12 +146,14 @@ public class GameManager : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string nextSceneName = currentScene.name == "1" ? "2" : "1";
+        UIManager.isPaused = false; // Clear the global pause state before loading the next level
         SceneManager.LoadScene(nextSceneName);
     }
 
     public void OnRestartButtonClicked()
     {
         Scene currentScene = SceneManager.GetActiveScene();
+        UIManager.isPaused = false; // Clear the global pause state before restarting
         SceneManager.LoadScene(currentScene.name);
     }
 }

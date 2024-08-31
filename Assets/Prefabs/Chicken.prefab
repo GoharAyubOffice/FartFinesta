@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 867263608881388761}
   - component: {fileID: 1139345743908321756}
   - component: {fileID: 5985313114704065516}
-  - component: {fileID: 501396541333722276}
+  - component: {fileID: 914757437771009999}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Player
@@ -283,7 +283,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345920509112252411}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 22583b1f732e24943b0506e44bb6537b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -341,18 +341,15 @@ MonoBehaviour:
   speed: 20
   variableJoystick: {fileID: 0}
   rb: {fileID: 6321490659259121995}
-  fartPower: 100
-  playerPoints: 0
-  gravityScale: 1
   jumpParticles: {fileID: 5747118913466287692, guid: 7b408e6c73b54e044a1a355d04cefc7b,
     type: 3}
   dustParticles: {fileID: 7700027631441733719}
-  rotationTransitionSpeed: 10
   isGrounded: 0
   isGroundedTransform: 0.1
   audioSource: {fileID: 5985313114704065516}
   footStepSoundVolume: 1.5
   footStepSound: {fileID: 8300000, guid: eaf0c0f48b92b47a38b833a495cb714e, type: 3}
+  gravityScale: 1
 --- !u!114 &4624051880060830946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,7 +388,7 @@ MonoBehaviour:
   thudSound: {fileID: 8300000, guid: 76d02b92954b048bd9751e38c6ccc65b, type: 3}
   collectSound: {fileID: 8300000, guid: 79d11f3a01f021a41840674299a2aba8, type: 3}
   hitSound: {fileID: 8300000, guid: 6d9248a19f5a84a328732326886d2b42, type: 3}
-  audioSource: {fileID: 501396541333722276}
+  audioSource: {fileID: 0}
   thudVolume: 4
   splatVolume: 1
   collectVolume: 1
@@ -636,7 +633,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &501396541333722276
+--- !u!82 &914757437771009999
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -646,8 +643,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: fe48ecc5ad440534f9a8a66a9bf6513d, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

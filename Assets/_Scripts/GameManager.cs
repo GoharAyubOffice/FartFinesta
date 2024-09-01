@@ -144,10 +144,27 @@ public class GameManager : MonoBehaviour
 
     public void OnNextLevelButtonClicked()
     {
+        // Get the current scene
         Scene currentScene = SceneManager.GetActiveScene();
-        string nextSceneName = currentScene.name == "1" ? "2" : "1";
-        UIManager.isPaused = false; // Clear the global pause state before loading the next level
-        SceneManager.LoadScene(nextSceneName);
+        int currentSceneIndex = currentScene.buildIndex;
+
+        // Determine the next level index
+        int nextSceneIndex = currentSceneIndex + 1;
+
+        // Check if the next level index is within the available scenes
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            // Load the next level
+            SceneManager.LoadScene(nextSceneIndex);
+        }
+        else
+        {
+            // If there are no more levels, restart at level 1
+            SceneManager.LoadScene(0);
+        }
+
+        // Clear the global pause state before loading the next level
+        UIManager.isPaused = false;
     }
 
     public void OnRestartButtonClicked()

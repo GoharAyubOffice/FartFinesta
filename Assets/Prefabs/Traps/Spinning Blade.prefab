@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6693860453138443055}
   - component: {fileID: 2770877463244145818}
   - component: {fileID: 3902980030613777681}
-  - component: {fileID: 3840664285278203062}
+  - component: {fileID: 3387668504734924132}
   m_Layer: 0
   m_Name: Spinning Blade
   m_TagString: Traps
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationAxis: {x: 0, y: 180, z: 0}
   rotationSpeed: 10
---- !u!65 &3840664285278203062
-BoxCollider:
+--- !u!64 &3387668504734924132
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,6 +117,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 4.817555, y: 0.07593357, z: 4.6082606}
-  m_Center: {x: -0.062788725, y: 0, z: 0.06278777}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6093506626702089045, guid: e661cc634bd4c1d4687836011cb6bc47, type: 3}

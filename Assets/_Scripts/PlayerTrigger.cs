@@ -8,11 +8,17 @@ public class PlayerTrigger : MonoBehaviour
     public Animator playerAnimator; // Reference to the player's Animator component
     [SerializeField] private Transform player;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSourceJumpSound;
     public GameObject finishUI; // Reference to the finish UI Canvas
     public TextMeshProUGUI congratsText; // Reference to the congratulations TextMeshPro
     public AudioClip clappingSound; // Reference to the clapping sound clip
 
     public GameManager gameManager;
+    public ParticleSystem featherParticles; // Reference to the particle system prefab for death effect
+    [SerializeField] private float _finishUIDelay = 2f;
+
+    [SerializeField] private AudioSource[] audioSources;      // Array to store all AudioSource components in the scene
+
 
     void Start()
     {
@@ -36,67 +42,105 @@ public class PlayerTrigger : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("finish"))
+private void OnCollisionEnter(Collision other) 
+{
+     if (other.gameObject.CompareTag("finish"))
         {
-            // Stop player movement
-            var joystickPlayer = GetComponent<JoystickPlayerExample>();
-            if (joystickPlayer != null)
-            {
-                joystickPlayer.enabled = false;
-            }
-            else
-            {
-                Debug.LogWarning("JoystickPlayerExample script not found.");
-            }
+            HandleFinish();
+        }
+        else if(other.gameObject.CompareTag("Traps"))
+        {
+            HandleDeath();
+            
 
-            var fartPropulsion = GetComponent<FartPropulsion>();
-            if (fartPropulsion != null)
-            {
-                fartPropulsion.enabled = false;
-            }
-            else
-            {
-                Debug.LogWarning("FartPropulsion script not found.");
-            }
+        // Instantiate death particles
+        if (featherParticles != null)
+        {
+            featherParticles.Play();
+        }
+        }
+}
+    void HandleFinish()
+    {
+        StopPlayerMovement();
 
-            // Set the win animation
-            if (playerAnimator != null)
-            {
-                playerAnimator.SetTrigger("Win");
-                playerAnimator.SetBool("isWalking", false);
-            }
-            else
-            {
-                Debug.LogError("Player Animator is not assigned.");
-            }
+        // Set the win animation
+        if (playerAnimator != null)
+        {
+            playerAnimator.SetTrigger("Win");
+            playerAnimator.SetBool("isWalking", false);
+        }
+        else
+        {
+            Debug.LogError("Player Animator is not assigned.");
+        }
 
-            if (gameManager != null)
-            {
-                gameManager.FinishGame();
-            }
-            else
-            {
-                Debug.LogError("GameManager is not assigned.");
-            }
+        if (gameManager != null)
+        {
+            gameManager.FinishGame();
+        }
+        else
+        {
+            Debug.LogError("GameManager is not assigned.");
+        }
 
-            // Play the clapping sound
-            if (audioSource != null && clappingSound != null)
-            {
-                audioSource.PlayOneShot(clappingSound);
-            }
-            else
-            {
-                Debug.LogError("AudioSource or clappingSound is not assigned.");
-            }
+        // Play the clapping sound
+        if (audioSource != null && clappingSound != null)
+        {
+            audioSource.PlayOneShot(clappingSound);
+        }
+        else
+        {
+            Debug.LogError("AudioSource or clappingSound is not assigned.");
+        }
 
-            // Start coroutine to show finish UI after a delay
-            StartCoroutine(ShowFinishUIAfterDelay(1f)); // Adjust the delay as needed
+        // Start coroutine to show finish UI after a delay
+        StartCoroutine(ShowFinishUIAfterDelay(1f)); // Adjust the delay as needed
 
-            congratsText.text = "Congratulations!";
+        congratsText.text = "Congratulations!";
+    }
 
-            Debug.Log("Player reached the finish point!");
+    void HandleDeath()
+    {
+
+        StopPlayerMovement();
+
+        playerAnimator.SetBool("Die",true);
+
+        Debug.Log("Player Died");
+        
+
+        // Optionally, if you have a GameOver UI or similar, show it here
+        if (gameManager != null)
+        {
+            StartCoroutine(ShowGameOverScreenAfterDelay(_finishUIDelay)); // Adjust the delay as needed
+        }
+        else
+        {
+            Debug.LogError("GameManager is not assigned.");
+        }
+    }
+
+    void StopPlayerMovement()
+    {
+        var joystickPlayer = GetComponent<JoystickPlayerExample>();
+        if (joystickPlayer != null)
+        {
+            joystickPlayer.enabled = false;
+        }
+        else
+        {
+            Debug.LogWarning("JoystickPlayerExample script not found.");
+        }
+
+        var fartPropulsion = GetComponent<FartPropulsion>();
+        if (fartPropulsion != null)
+        {
+            fartPropulsion.enabled = false;
+        }
+        else
+        {
+            Debug.LogWarning("FartPropulsion script not found.");
         }
     }
 
@@ -114,6 +158,22 @@ public class PlayerTrigger : MonoBehaviour
         {
             Debug.LogError("Finish UI is not assigned.");
         }
+    }
+
+    IEnumerator ShowGameOverScreenAfterDelay(float delay)
+    {
+        // Wait for the specified delay
+        yield return new WaitForSeconds(delay);
+
+        // Assuming you have a game over screen or you want to restart the level
+        if (gameManager != null)
+        {
+            gameManager.ShowGameOverScreen();
+        }
+        foreach (AudioSource audio in audioSources)
+            {
+                audio.Pause(); // Pause the audio source
+            }
     }
 
     public void OnNextLevelButtonClicked()

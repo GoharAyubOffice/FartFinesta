@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
     public static bool isPaused = false;     // Static to track if the game is paused
 
     private Animator[] animators;            // Array to store all animators in the scene
-    private AudioSource[] audioSources;      // Array to store all AudioSource components in the scene
+    [SerializeField] private AudioSource[] audioSources;      // Array to store all AudioSource components in the scene
 
     private void Start()
     {

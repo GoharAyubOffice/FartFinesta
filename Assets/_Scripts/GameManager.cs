@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
     private float startTime;
 
     [SerializeField] private int targetFrameRate = 60;
+    [SerializeField] private float _UIShowDelay = 2f;
 
     void Start()
     {
@@ -132,12 +134,26 @@ public class GameManager : MonoBehaviour
 
     public void ShowGameOverScreen()
     {
+        // Start the coroutine to show the game over screen after a delay
+        StartCoroutine(DelayedShowGameOverScreen(_UIShowDelay)); // Adjust the delay time (in seconds) as needed
+    }
+
+    private IEnumerator DelayedShowGameOverScreen(float delay)
+    {
+        // Disable player controls immediately
+        joystickPlayerExample.enabled = false;
+        fartPropulsion.enabled = false;
+
+        // Wait for the specified delay
+        yield return new WaitForSeconds(delay);
+
+        // Show the game over screen UI
         nextLevelScreen.SetActive(true);
         restartButton.gameObject.SetActive(true);
         nextLevelButton.gameObject.SetActive(false); // Hide the next level button on game over
         gameOverMessageText.text = "Try Again"; // Set the game over message
-        joystickPlayerExample.enabled = false;
-        fartPropulsion.enabled = false;
+
+        // Pause the game after showing the UI
         UIManager.isPaused = true; // Set the global pause state
         Time.timeScale = 0;
     }

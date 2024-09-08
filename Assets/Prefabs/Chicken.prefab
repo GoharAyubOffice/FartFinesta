@@ -350,7 +350,7 @@ MonoBehaviour:
   dustParticles: {fileID: 7700027631441733719}
   isGrounded: 0
   isGroundedTransform: 0.1
-  audioSource: {fileID: 426878672037937159}
+  audioSource: {fileID: 0}
   footStepSoundVolume: 1.5
   footStepSound: {fileID: 8300000, guid: eaf0c0f48b92b47a38b833a495cb714e, type: 3}
   gravityScale: 1
@@ -411,13 +411,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 2355479620684464254}
   player: {fileID: 6990016695532165490}
-  audioSource: {fileID: 1140829488042128345}
+  audioSource: {fileID: 0}
+  audioSourceJumpSound: {fileID: 0}
   finishUI: {fileID: 0}
   congratsText: {fileID: 0}
   clappingSound: {fileID: 8300000, guid: 1200e3546f3920a4892b3c6867343e4a, type: 3}
   gameManager: {fileID: 0}
   featherParticles: {fileID: 5700092551555672216}
   _finishUIDelay: 2
+  audioSources: []
 --- !u!114 &2119598534085005208
 MonoBehaviour:
   m_ObjectHideFlags: 0

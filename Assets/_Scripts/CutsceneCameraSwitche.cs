@@ -14,7 +14,6 @@ public class CutsceneCameraSwitcher : MonoBehaviour
     
     [SerializeField] private GameObject uiManager;
     [SerializeField] private GameObject Canvas;
-    [SerializeField] private GameObject player;
 
     private void Start()
     {
@@ -28,7 +27,6 @@ public class CutsceneCameraSwitcher : MonoBehaviour
         // Subscribe to the event when the cutscene finishes
         cutsceneTimeline.stopped += OnCutsceneFinished;
 
-        gameManager = GameObject.Find("GameManager");
 
 
     }
@@ -43,6 +41,5 @@ public class CutsceneCameraSwitcher : MonoBehaviour
         gameManager.SetActive(true);
         musicManager.SetActive(true);
         uiManager.SetActive(true);
-        player.SetActive(true);
     }
 }

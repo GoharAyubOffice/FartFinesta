@@ -3,11 +3,19 @@ using UnityEngine.Advertisements;
 
 public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnityAdsLoadListener, IUnityAdsShowListener
 {
+    public static AdsManager instance;
     [SerializeField] private string _androidGameId = "your_android_game_id";
     [SerializeField] private string _iOSGameId = "your_ios_game_id";
     [SerializeField] private bool _testMode = true;
     private string _gameId;
 
+private void Awake() 
+{
+    if(instance == null)
+    {
+        instance = this;
+    }
+}
     void Start()
     {
         InitializeAds();
@@ -15,10 +23,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
 
     public void InitializeAds()
     {
-        _gameId = (Application.platform == RuntimePlatform.IPhonePlayer)
-            ? _iOSGameId
-            : _androidGameId;
-
+        _gameId = (Application.platform == RuntimePlatform.IPhonePlayer) ? _iOSGameId : _androidGameId;
         Advertisement.Initialize(_gameId, _testMode, this);
     }
 
@@ -43,6 +48,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
     {
         string adUnitId = "Interstitial_Android"; // Use your actual Ad Unit ID
         Advertisement.Show(adUnitId, this);
+        
     }
 
     public void OnUnityAdsAdLoaded(string placementId)
@@ -73,6 +79,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
     public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
     {
         Debug.Log($"Ad Unit {placementId} completed - {showCompletionState.ToString()}");
+
         LoadAd();  // Load the next ad after showing the current one
     }
 }

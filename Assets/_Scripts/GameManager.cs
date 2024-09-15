@@ -19,11 +19,11 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI gameOverMessageText; // Reference to the game over message text
 
-    private JoystickPlayerExample joystickPlayerExample;
-    private FartPropulsion fartPropulsion;
-    public Button fartButton;
+    public  JoystickPlayerExample joystickPlayerExample;
+    public  FartPropulsion fartPropulsion;
+    public  Button fartButton;
 
-    private bool isGameFinished = false;
+    public bool isGameFinished = false;
     private float startTime;
 
     [SerializeField] private int targetFrameRate = 60;
@@ -73,10 +73,11 @@ public class GameManager : MonoBehaviour
     {
         if (isGameFinished) return; // Ensure the game finish logic runs only once
 
-        isGameFinished = true;
-        joystickPlayerExample.enabled = false;
-        fartPropulsion.enabled = false;
-        fartButton.enabled = false;
+            isGameFinished = true;
+            joystickPlayerExample.enabled = false;
+            fartPropulsion.enabled = false;
+            fartButton.enabled = false;
+    
 
         // Calculate elapsed time
         float elapsedTime = Time.time - startTime;
@@ -155,7 +156,6 @@ public class GameManager : MonoBehaviour
 
         // Pause the game after showing the UI
         UIManager.isPaused = true; // Set the global pause state
-        Time.timeScale = 0;
     }
 
     public void OnNextLevelButtonClicked()

@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9003812045420526616
 Transform:
   m_ObjectHideFlags: 0
@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b1af1dc0e705b47af71d13c1558772, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTrigger: {fileID: 0}
   startScreen: {fileID: 0}
   nextLevelScreen: {fileID: 0}
   player: {fileID: 0}
@@ -59,5 +60,9 @@ MonoBehaviour:
   restartButton: {fileID: 0}
   nextLevelButton: {fileID: 0}
   gameOverMessageText: {fileID: 0}
+  joystickPlayerExample: {fileID: 0}
+  fartPropulsion: {fileID: 0}
   fartButton: {fileID: 0}
+  isGameFinished: 0
   targetFrameRate: 61
+  _UIShowDelay: 2

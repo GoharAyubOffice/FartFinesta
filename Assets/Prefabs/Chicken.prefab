@@ -225,7 +225,6 @@ GameObject:
   - component: {fileID: 4624051880060830946}
   - component: {fileID: 6099150791158968726}
   - component: {fileID: 7877772103556307297}
-  - component: {fileID: 2119598534085005208}
   - component: {fileID: 867263608881388761}
   - component: {fileID: 1139345743908321756}
   - component: {fileID: 914757437771009999}
@@ -411,8 +410,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 2355479620684464254}
   player: {fileID: 6990016695532165490}
-  audioSource: {fileID: 0}
-  audioSourceJumpSound: {fileID: 0}
+  audioSource: {fileID: 426878672037937159}
+  audioSourceJumpSound: {fileID: 1139345743908321756}
   finishUI: {fileID: 0}
   congratsText: {fileID: 0}
   clappingSound: {fileID: 8300000, guid: 1200e3546f3920a4892b3c6867343e4a, type: 3}
@@ -420,22 +419,6 @@ MonoBehaviour:
   featherParticles: {fileID: 5700092551555672216}
   _finishUIDelay: 2
   audioSources: []
---- !u!114 &2119598534085005208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1345920509112252411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b199bb39443014439d7c5ccfe4879d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  starBurstPrefab: {fileID: 4591313650637563851, guid: d0b17a0d59a9bbf42a0fc4ad240904aa,
-    type: 3}
-  fartPowerDecrease: 100
-  fart: {fileID: 4624051880060830946}
 --- !u!114 &867263608881388761
 MonoBehaviour:
   m_ObjectHideFlags: 0

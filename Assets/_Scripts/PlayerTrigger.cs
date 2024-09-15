@@ -20,6 +20,7 @@ public class PlayerTrigger : MonoBehaviour
     [SerializeField] private AudioSource[] audioSources;      // Array to store all AudioSource components in the scene
 
 
+
     void Start()
     {
         playerAnimator = GetComponent<Animator>();
@@ -51,7 +52,6 @@ private void OnCollisionEnter(Collision other)
         else if(other.gameObject.CompareTag("Traps"))
         {
             HandleDeath();
-            
 
         // Instantiate death particles
         if (featherParticles != null)
@@ -74,6 +74,10 @@ private void OnCollisionEnter(Collision other)
         {
             Debug.LogError("Player Animator is not assigned.");
         }
+            gameManager.isGameFinished = false;
+            gameManager.joystickPlayerExample.enabled = true;
+            gameManager.fartPropulsion.enabled = true;
+            gameManager.fartButton.enabled = true;
 
         if (gameManager != null)
         {
@@ -102,14 +106,12 @@ private void OnCollisionEnter(Collision other)
 
     void HandleDeath()
     {
-
         StopPlayerMovement();
 
         playerAnimator.SetBool("Die",true);
 
         Debug.Log("Player Died");
         
-
         // Optionally, if you have a GameOver UI or similar, show it here
         if (gameManager != null)
         {

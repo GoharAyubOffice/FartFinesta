@@ -159,30 +159,21 @@ public class GameManager : MonoBehaviour
     }
 
     public void OnNextLevelButtonClicked()
+{
+    int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+    int nextSceneIndex = currentSceneIndex + 1;
+
+    if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
     {
-        // Get the current scene
-        Scene currentScene = SceneManager.GetActiveScene();
-        int currentSceneIndex = currentScene.buildIndex;
-
-        // Determine the next level index
-        int nextSceneIndex = currentSceneIndex + 1;
-
-        // Check if the next level index is within the available scenes
-        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
-        {
-            // Load the next level
-            SceneManager.LoadScene(nextSceneIndex);
-        }
-        else
-        {
-            // If there are no more levels, restart at level 1
-            SceneManager.LoadScene(0);
-        }
-
-        // Clear the global pause state before loading the next level
-        UIManager.isPaused = false;
+        Time.timeScale = 1; // Reset time scale to normal
+        UIManager.isPaused = false; // Clear the global pause state
+        SceneManager.LoadScene(nextSceneIndex);
     }
-
+    else
+    {
+        Debug.Log("No more levels to load.");
+    }
+}
     public void OnRestartButtonClicked()
     {
         Scene currentScene = SceneManager.GetActiveScene();

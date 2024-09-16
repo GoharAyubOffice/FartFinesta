@@ -26,9 +26,7 @@ public class CutsceneCameraSwitcher : MonoBehaviour
 
         // Subscribe to the event when the cutscene finishes
         cutsceneTimeline.stopped += OnCutsceneFinished;
-
-
-
+        
     }
 
     void OnCutsceneFinished(PlayableDirector pd)

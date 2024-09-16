@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1128328564}
-  m_IndirectSpecularColor: {r: 0.056591675, g: 0.34178907, b: 0.9833995, a: 1}
+  m_IndirectSpecularColor: {r: 0.23886453, g: 0.35658577, b: 0.41989636, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1761,6 +1761,18 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 258927749}
   m_SourcePrefab: {fileID: 100100000, guid: d7f49dbab1d4d4206a1271d87761be11, type: 3}
+--- !u!114 &182081686 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3777608992629686900, guid: d7f49dbab1d4d4206a1271d87761be11,
+    type: 3}
+  m_PrefabInstance: {fileID: 182081685}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258927723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a37d705c8e9115e439ec799186182634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &184286775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8970,13 +8982,13 @@ Transform:
   m_GameObject: {fileID: 722270535}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.8622284, y: 17.166107, z: -15.160043}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1708705619}
   - {fileID: 1442871700}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1442111801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &722930433
 PrefabInstance:
@@ -18610,7 +18622,8 @@ Transform:
   m_LocalPosition: {x: 5.8622284, y: 17.166107, z: -15.160043}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 722270536}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1442871699
@@ -36721,6 +36734,11 @@ PrefabInstance:
       objectReference: {fileID: 11566656}
     - target: {fileID: 8135935215493909111, guid: 2167bd570a48ea64485d4d922a0de9f6,
         type: 3}
+      propertyPath: fartPropulsion
+      value: 
+      objectReference: {fileID: 258927728}
+    - target: {fileID: 8135935215493909111, guid: 2167bd570a48ea64485d4d922a0de9f6,
+        type: 3}
       propertyPath: nextLevelButton
       value: 
       objectReference: {fileID: 593721005}
@@ -36734,6 +36752,11 @@ PrefabInstance:
       propertyPath: gameOverMessageText
       value: 
       objectReference: {fileID: 225570938}
+    - target: {fileID: 8135935215493909111, guid: 2167bd570a48ea64485d4d922a0de9f6,
+        type: 3}
+      propertyPath: joystickPlayerExample
+      value: 
+      objectReference: {fileID: 182081686}
     - target: {fileID: 8135935215493909111, guid: 2167bd570a48ea64485d4d922a0de9f6,
         type: 3}
       propertyPath: goldenStars.Array.data[0]
@@ -37390,7 +37413,6 @@ SceneRoots:
   - {fileID: 4107931304268807219}
   - {fileID: 1442111801}
   - {fileID: 808387322}
-  - {fileID: 722270536}
   - {fileID: 1727357840}
   - {fileID: 182081685}
   - {fileID: 1802743189}

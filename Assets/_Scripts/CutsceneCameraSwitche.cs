@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.Playables;
-using Cinemachine;
+using Unity.Cinemachine;
 
 public class CutsceneCameraSwitcher : MonoBehaviour
 {

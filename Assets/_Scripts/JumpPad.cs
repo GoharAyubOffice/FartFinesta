@@ -22,7 +22,7 @@ public class JumpPad : MonoBehaviour
             if (playerRb != null)
             {
                 // Apply a force to the player's rigidbody
-                playerRb.velocity = Vector3.zero; // Reset velocity to ensure consistent jump
+                playerRb.linearVelocity = Vector3.zero; // Reset velocity to ensure consistent jump
                 playerRb.AddForce(jumpDirection.normalized * jumpForce, ForceMode.VelocityChange);
 
                 // Play the bounce animation

@@ -46,7 +46,7 @@ public class FartPropulsion : MonoBehaviour
         }
 
         // Check if the player is falling
-        bool isFalling = !IsGrounded() && rb.velocity.y < 0;
+        bool isFalling = !IsGrounded() && rb.linearVelocity.y < 0;
 
         if (isFalling)
         {
@@ -119,7 +119,7 @@ public class FartPropulsion : MonoBehaviour
         {
             // Apply continuous upward force
             rb.AddForce(new Vector3(0, 50, 0) * continuousForce, ForceMode.Acceleration);
-            rb.velocity *= 0.25f;
+            rb.linearVelocity *= 0.25f;
 
             // Play jump particles continuously
             if (!jumpParticles.isPlaying)
@@ -190,7 +190,7 @@ public class FartPropulsion : MonoBehaviour
     {
         isGameOver = true;
         // Stop player movement
-        rb.velocity = Vector3.zero;
+        rb.linearVelocity = Vector3.zero;
         rb.isKinematic = true;
 
         // Display game over UI or restart game logic

@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3083452711040709759}
   - component: {fileID: 6247576464637428861}
   - component: {fileID: 3024478347994988069}
+  - component: {fileID: 1003494667157170065}
   m_Layer: 0
   m_Name: FeatherColletible
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,6 +118,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationAxis: {x: 0, y: 1, z: 0}
   rotationSpeed: 100
+--- !u!45 &1003494667157170065
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5378794612346109086}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 0}
 --- !u!1 &8551159112398631468
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,7 +8,6 @@ public class PlayerTrigger : MonoBehaviour
     public Animator playerAnimator; // Reference to the player's Animator component
     [SerializeField] private Transform player;
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioSource audioSourceJumpSound;
     public GameObject finishUI; // Reference to the finish UI Canvas
     public TextMeshProUGUI congratsText; // Reference to the congratulations TextMeshPro
     public AudioClip clappingSound; // Reference to the clapping sound clip

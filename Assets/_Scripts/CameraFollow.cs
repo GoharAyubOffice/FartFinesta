@@ -9,7 +9,7 @@ public class CameraFollow : MonoBehaviour
 
     [Header("Shake Settings")]
     public float shakeDuration = 1f;    // How long the shake lasts
-    public float shakeAmount = 0.2f;    // Shake intensity
+    public float shakeAmount = 0.1f;    // Shake intensity
     public float decreaseFactor = 1f; // Speed of shake decrease
 
     private Vector3 originalPosition;  // Original camera position

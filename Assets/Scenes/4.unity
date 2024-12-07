@@ -2071,7 +2071,7 @@ PrefabInstance:
         type: 3}
       propertyPath: audioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 182081686}
     - target: {fileID: 3777608992629686900, guid: d7f49dbab1d4d4206a1271d87761be11,
         type: 3}
       propertyPath: variableJoystick
@@ -2173,6 +2173,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f49dbab1d4d4206a1271d87761be11, type: 3}
+--- !u!82 &182081686 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2407344095589337135, guid: d7f49dbab1d4d4206a1271d87761be11,
+    type: 3}
+  m_PrefabInstance: {fileID: 182081685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &184286775
 PrefabInstance:
   m_ObjectHideFlags: 0

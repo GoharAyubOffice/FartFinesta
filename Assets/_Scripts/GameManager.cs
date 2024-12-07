@@ -19,9 +19,9 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI gameOverMessageText; // Reference to the game over message text
 
-    public  JoystickPlayerExample joystickPlayerExample;
-    public  FartPropulsion fartPropulsion;
-    public  Button fartButton;
+    public JoystickPlayerExample joystickPlayerExample;
+    public FartPropulsion fartPropulsion;
+    public Button fartButton;
 
     public bool isGameFinished = false;
     private float startTime;
@@ -33,6 +33,12 @@ public class GameManager : MonoBehaviour
     {
         joystickPlayerExample = player.GetComponent<JoystickPlayerExample>();
         fartPropulsion = player.GetComponent<FartPropulsion>();
+
+        // Load the last played scene if this is the first scene
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            SaveManager.LoadSavedScene();
+        }
 
         startScreen.SetActive(true);
         joystickPlayerExample.enabled = false;
@@ -73,11 +79,14 @@ public class GameManager : MonoBehaviour
     {
         if (isGameFinished) return; // Ensure the game finish logic runs only once
 
-            isGameFinished = true;
-            joystickPlayerExample.enabled = false;
-            fartPropulsion.enabled = false;
-            fartButton.enabled = false;
-    
+        isGameFinished = true;
+        joystickPlayerExample.enabled = false;
+        fartPropulsion.enabled = false;
+        fartButton.enabled = false;
+
+        // Save the progress (current scene name)
+        SaveManager.SaveSceneData();
+
 
         // Calculate elapsed time
         float elapsedTime = Time.time - startTime;
@@ -159,21 +168,21 @@ public class GameManager : MonoBehaviour
     }
 
     public void OnNextLevelButtonClicked()
-{
-    int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-    int nextSceneIndex = currentSceneIndex + 1;
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
 
-    if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
-    {
-        Time.timeScale = 1; // Reset time scale to normal
-        UIManager.isPaused = false; // Clear the global pause state
-        SceneManager.LoadScene(nextSceneIndex);
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            Time.timeScale = 1; // Reset time scale to normal
+            UIManager.isPaused = false; // Clear the global pause state
+            SceneManager.LoadScene(nextSceneIndex);
+        }
+        else
+        {
+            Debug.Log("No more levels to load.");
+        }
     }
-    else
-    {
-        Debug.Log("No more levels to load.");
-    }
-}
     public void OnRestartButtonClicked()
     {
         Scene currentScene = SceneManager.GetActiveScene();

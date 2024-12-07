@@ -146,7 +146,7 @@ public class FartPropulsion : MonoBehaviour
     private bool IsGrounded()
     {
         // Check if the player is grounded using a raycast
-        return Physics.Raycast(transform.position, Vector3.down, 0.2f);        
+        return Physics.Raycast(transform.position, Vector3.down, 0.2f);
     }
 
     private void OnCollisionEnter(Collision collision)

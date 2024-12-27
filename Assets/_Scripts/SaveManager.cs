@@ -1,54 +1,99 @@
+// SaveManager.cs
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SaveManager : MonoBehaviour
 {
-    private const string LastSceneKey = "LastPlayedScene";
+    private static SaveManager instance;
+    private const string SCENE_KEY = "LastPlayedScene";
+    private const string LEVEL_KEY = "CurrentLevel";
+    private bool isFirstLoad = true;
 
-    // Save the current scene's name
-    public static void SaveSceneData()
+    public static SaveManager Instance
     {
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        PlayerPrefs.SetString(LastSceneKey, currentSceneName);
+        get
+        {
+            if (instance == null)
+            {
+                GameObject go = new GameObject("MobileSaveManager");
+                instance = go.AddComponent<SaveManager>();
+                DontDestroyOnLoad(go);
+            }
+            return instance;
+        }
+    }
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        // Only load saved progress when game first starts
+        if (isFirstLoad)
+        {
+            LoadProgress();
+            isFirstLoad = false;
+        }
+    }
+
+    // Convert build index to actual scene name (add 1 to match your scene naming)
+    private string GetSceneNameFromBuildIndex(int buildIndex)
+    {
+        return (buildIndex + 1).ToString();
+    }
+
+    // Convert scene name to build index (subtract 1 to match Unity's indexing)
+    private int GetBuildIndexFromSceneName(string sceneName)
+    {
+        if (int.TryParse(sceneName, out int sceneNumber))
+        {
+            return sceneNumber - 1;
+        }
+        return 0; // Default to first scene if parsing fails
+    }
+
+    public void SaveProgress(int buildIndex)
+    {
+        string actualSceneName = GetSceneNameFromBuildIndex(buildIndex);
+        PlayerPrefs.SetString(SCENE_KEY, actualSceneName);
+        PlayerPrefs.SetInt(LEVEL_KEY, buildIndex);
         PlayerPrefs.Save();
-        Debug.Log("Scene saved: " + currentSceneName);
+        Debug.Log($"Progress saved: Scene {actualSceneName}, Build Index {buildIndex}");
     }
 
-    // Load the saved scene
-    public static void LoadSavedScene()
+    public void LoadProgress()
     {
-        if (PlayerPrefs.HasKey(LastSceneKey))
+        if (PlayerPrefs.HasKey(SCENE_KEY))
         {
-            string savedSceneName = PlayerPrefs.GetString(LastSceneKey);
+            string savedScene = PlayerPrefs.GetString(SCENE_KEY);
+            int savedBuildIndex = GetBuildIndexFromSceneName(savedScene);
 
-            // Check if the saved scene exists in the build settings
-            if (SceneExistsInBuildSettings(savedSceneName))
+            // Only load if we're in level 1 (this means game just started)
+            if (SceneManager.GetActiveScene().buildIndex == 0)
             {
-                SceneManager.LoadScene(savedSceneName);
-            }
-            else
-            {
-                Debug.LogWarning("Saved scene not found in build settings: " + savedSceneName);
+                SceneManager.LoadScene(savedBuildIndex);
+                GameEvents.OnLevelLoaded?.Invoke(savedBuildIndex);
+                Debug.Log($"Loading saved progress: Scene {savedScene}, Build Index {savedBuildIndex}");
             }
         }
-        else
-        {
-            Debug.Log("No saved scene found. Starting from the first scene.");
-        }
+        // If no save data exists, just stay in level 1
     }
 
-    // Check if a scene exists in the build settings
-    private static bool SceneExistsInBuildSettings(string sceneName)
+    public void ResetProgress()
     {
-        int sceneCount = SceneManager.sceneCountInBuildSettings;
-        for (int i = 0; i < sceneCount; i++)
-        {
-            string path = SceneUtility.GetScenePathByBuildIndex(i);
-            string name = System.IO.Path.GetFileNameWithoutExtension(path);
-
-            if (name == sceneName)
-                return true;
-        }
-        return false;
+        PlayerPrefs.DeleteKey(SCENE_KEY);
+        PlayerPrefs.DeleteKey(LEVEL_KEY);
+        PlayerPrefs.Save();
+        Debug.Log("Progress reset complete");
     }
+}
+
+public static class GameEvents
+{
+    public static System.Action<int> OnLevelLoaded;
 }

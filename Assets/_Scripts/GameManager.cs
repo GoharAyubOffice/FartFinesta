@@ -29,16 +29,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int targetFrameRate = 60;
     [SerializeField] private float _UIShowDelay = 2f;
 
+    private int currentLevel;
+
     void Start()
     {
+
         joystickPlayerExample = player.GetComponent<JoystickPlayerExample>();
         fartPropulsion = player.GetComponent<FartPropulsion>();
 
-        // Load the last played scene if this is the first scene
-        if (SceneManager.GetActiveScene().buildIndex == 0)
-        {
-            SaveManager.LoadSavedScene();
-        }
 
         startScreen.SetActive(true);
         joystickPlayerExample.enabled = false;
@@ -48,6 +46,7 @@ public class GameManager : MonoBehaviour
         startTime = Time.time; // Initialize timer
 
         Application.targetFrameRate = 60;
+
     }
 
     void Update()
@@ -72,27 +71,24 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
 
         Application.targetFrameRate = targetFrameRate;
-        QualitySettings.vSyncCount = 0; // 0 means don't sync to VBlank
+        QualitySettings.vSyncCount = 0;
     }
 
     public void FinishGame()
     {
-        if (isGameFinished) return; // Ensure the game finish logic runs only once
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+        SaveManager.Instance.SaveProgress(currentLevel);  // Save progress when level is completed
+
+        if (isGameFinished) return;
 
         isGameFinished = true;
         joystickPlayerExample.enabled = false;
         fartPropulsion.enabled = false;
         fartButton.enabled = false;
 
-        // Save the progress (current scene name)
-        SaveManager.SaveSceneData();
-
-
-        // Calculate elapsed time
         float elapsedTime = Time.time - startTime;
 
-        // Determine star count based on time
-        int starCount = 1; // Default to 1 star
+        int starCount = 1;
         if (elapsedTime <= 20)
         {
             starCount = 3;
@@ -102,10 +98,7 @@ public class GameManager : MonoBehaviour
             starCount = 2;
         }
 
-        // Show stars based on the calculated star count
         ShowStars(starCount);
-
-        // Show the next level screen and buttons
         ShowNextLevelScreen();
     }
 
@@ -174,8 +167,8 @@ public class GameManager : MonoBehaviour
 
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
-            Time.timeScale = 1; // Reset time scale to normal
-            UIManager.isPaused = false; // Clear the global pause state
+            Time.timeScale = 1;
+            UIManager.isPaused = false;
             SceneManager.LoadScene(nextSceneIndex);
         }
         else
@@ -186,7 +179,8 @@ public class GameManager : MonoBehaviour
     public void OnRestartButtonClicked()
     {
         Scene currentScene = SceneManager.GetActiveScene();
-        UIManager.isPaused = false; // Clear the global pause state before restarting
+        UIManager.isPaused = false;
+        Time.timeScale = 1;
         SceneManager.LoadScene(currentScene.name);
     }
 }

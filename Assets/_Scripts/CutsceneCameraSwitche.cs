@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Playables;
 using Unity.Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class CutsceneCameraSwitcher : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class CutsceneCameraSwitcher : MonoBehaviour
 
     private void Start()
     {
+       
+
         // Disable the main gameplay camera at the start and enable the cutscene camera
         mainGameplayCamera.enabled = false;
         cutsceneCamera.enabled = true;

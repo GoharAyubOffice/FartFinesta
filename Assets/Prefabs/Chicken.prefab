@@ -229,11 +229,11 @@ GameObject:
   - component: {fileID: 6099150791158968726}
   - component: {fileID: 7877772103556307297}
   - component: {fileID: 867263608881388761}
-  - component: {fileID: 1139345743908321756}
-  - component: {fileID: 914757437771009999}
   - component: {fileID: 439556000505600682}
   - component: {fileID: 6735605994244169948}
   - component: {fileID: 2407344095589337135}
+  - component: {fileID: 914757437771009999}
+  - component: {fileID: 1139345743908321756}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Player
@@ -439,7 +439,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dustParticles: {fileID: 7700027631441733719}
---- !u!82 &1139345743908321756
+--- !u!114 &439556000505600682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345920509112252411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533cb8deb3ec743cdb79fe12da57300e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraScript: {fileID: 0}
+--- !u!114 &6735605994244169948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345920509112252411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a790a8fadbb4579a315399de2cfe3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  featherParticleEffect: {fileID: 1992185550446467764, guid: 6776393e1ff7ac54190eff56581adaa2,
+    type: 3}
+--- !u!82 &2407344095589337135
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -449,8 +477,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: abcc2069668f64038891d97248daa948, type: 3}
-  m_Resource: {fileID: 8300000, guid: abcc2069668f64038891d97248daa948, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -633,35 +661,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &439556000505600682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1345920509112252411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 533cb8deb3ec743cdb79fe12da57300e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraScript: {fileID: 0}
---- !u!114 &6735605994244169948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1345920509112252411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5a790a8fadbb4579a315399de2cfe3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  featherParticleEffect: {fileID: 1992185550446467764, guid: 6776393e1ff7ac54190eff56581adaa2,
-    type: 3}
---- !u!82 &2407344095589337135
+--- !u!82 &1139345743908321756
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -671,8 +671,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: abcc2069668f64038891d97248daa948, type: 3}
+  m_Resource: {fileID: 8300000, guid: abcc2069668f64038891d97248daa948, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

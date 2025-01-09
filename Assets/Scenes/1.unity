@@ -27,16 +27,16 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 6fcb592b9602bec4089a6e3fec294575, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 5bd2c16e1a469474dbd8e1eb8353de05, type: 2}
   m_HaloStrength: 0.173
   m_FlareStrength: 1
   m_FlareFadeSpeed: 4.43
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 16
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0.464
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1128328564}
   m_UseRadianceAmbientProbe: 0
@@ -67,7 +67,7 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_ReflectionCompression: 2
+    m_ReflectionCompression: 1
     m_MixedBakeMode: 2
     m_BakeBackend: 0
     m_PVRSampling: 1
@@ -134,11 +134,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (21)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -213,11 +208,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (34)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -349,11 +339,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (37)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -377,11 +362,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (43)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -507,11 +487,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (47)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -594,7 +569,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -619,11 +594,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (16)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -757,7 +727,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -782,11 +752,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (14)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -911,11 +876,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1059,11 +1019,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (25)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1146,7 +1101,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1230,7 +1185,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1326,7 +1281,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1410,7 +1365,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1435,11 +1390,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -1515,11 +1465,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (25)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1593,11 +1538,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -1723,11 +1663,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1810,7 +1745,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1972,11 +1907,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (14)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2002,7 +1932,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 123
   m_IsActive: 1
 --- !u!4 &136486091
 Transform:
@@ -2224,11 +2154,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (18)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2303,11 +2228,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (10)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2381,11 +2301,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (23)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2469,7 +2384,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2494,11 +2409,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -2623,11 +2533,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2777,11 +2682,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (19)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2805,11 +2705,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -2943,7 +2838,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3091,11 +2986,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -3312,11 +3202,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (23)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3391,11 +3276,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3469,11 +3349,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (44)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -3560,11 +3435,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (24)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -3731,11 +3601,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (21)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3809,11 +3674,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3889,11 +3749,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (33)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3917,11 +3772,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -4032,11 +3882,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -4170,7 +4015,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4246,11 +4091,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (37)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4324,11 +4164,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (26)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4524,11 +4359,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (32)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4602,11 +4432,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -4693,11 +4518,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -4896,11 +4716,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (21)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4974,11 +4789,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (26)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -5054,11 +4864,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (12)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5132,11 +4937,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -5262,11 +5062,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5340,11 +5135,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (34)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5504,11 +5294,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5532,11 +5317,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (45)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -5623,11 +5403,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (36)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -5789,11 +5564,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (19)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5868,11 +5638,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5946,11 +5711,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (44)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -6160,11 +5920,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (24)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6238,11 +5993,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (31)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6326,7 +6076,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6401,11 +6151,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (47)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6514,11 +6259,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -6652,7 +6392,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6736,7 +6476,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6812,11 +6552,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (29)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6840,11 +6575,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -6920,11 +6650,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantBig (14)
       objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6996,21 +6721,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.2307712
-      objectReference: {fileID: 0}
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.34398755
-      objectReference: {fileID: 0}
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.2307712
-      objectReference: {fileID: 0}
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.39
       objectReference: {fileID: 0}
@@ -7063,11 +6773,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mystical Rune Platform (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2890265751522405163, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7143,11 +6848,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (16)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7171,11 +6871,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -7301,11 +6996,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (26)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7329,11 +7019,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (40)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -7408,11 +7093,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -7546,7 +7226,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7622,11 +7302,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (32)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7700,11 +7375,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (19)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7814,11 +7484,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (33)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7890,11 +7555,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1274066120737411099, guid: c94e335b7d100a64cb7728bf6044dee3,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.3160081
-      objectReference: {fileID: 0}
-    - target: {fileID: 1274066120737411099, guid: c94e335b7d100a64cb7728bf6044dee3,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.35
       objectReference: {fileID: 0}
@@ -7943,35 +7603,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1642402254996052513, guid: c94e335b7d100a64cb7728bf6044dee3,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 1752238053406812516, guid: c94e335b7d100a64cb7728bf6044dee3,
         type: 3}
       propertyPath: m_Name
       value: Tree (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1752238053406812516, guid: c94e335b7d100a64cb7728bf6044dee3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1752238053406812516, guid: c94e335b7d100a64cb7728bf6044dee3,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 2559089213880545257, guid: c94e335b7d100a64cb7728bf6044dee3,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 8330125218523977879, guid: c94e335b7d100a64cb7728bf6044dee3,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8029,11 +7664,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (39)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -8243,11 +7873,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (12)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8322,11 +7947,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (15)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8350,11 +7970,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (46)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -8429,11 +8044,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -8565,11 +8175,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (17)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8652,7 +8257,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8736,7 +8341,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8761,11 +8366,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -8891,11 +8491,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (22)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8969,11 +8564,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (45)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9049,11 +8639,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9077,11 +8662,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (17)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -9215,7 +8795,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9299,7 +8879,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9459,11 +9039,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (23)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9538,11 +9113,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (17)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9566,11 +9136,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -9645,11 +9210,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -9774,11 +9334,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (27)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9977,11 +9532,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10005,11 +9555,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (28)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -10135,11 +9680,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (34)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10213,11 +9753,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (21)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10359,11 +9894,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (29)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -10581,7 +10111,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10645,11 +10175,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -10818,7 +10343,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10927,11 +10452,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -11057,11 +10577,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11144,7 +10659,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11253,11 +10768,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (28)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -11518,7 +11028,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 58
   m_IsActive: 1
 --- !u!4 &772483895
 Transform:
@@ -11652,11 +11162,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11773,7 +11278,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11798,11 +11303,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (46)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -11936,7 +11436,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12011,11 +11511,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12175,11 +11670,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (35)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12287,11 +11777,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -12481,11 +11966,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (37)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12610,11 +12090,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (40)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12689,11 +12164,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (45)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12717,11 +12187,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -12847,11 +12312,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (44)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12875,11 +12335,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (34)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -13005,11 +12460,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (16)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13033,11 +12483,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (42)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -13112,11 +12557,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -13316,11 +12756,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (30)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13403,7 +12838,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13558,11 +12993,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (31)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13636,11 +13066,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (41)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -13850,11 +13275,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13937,7 +13357,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14021,7 +13441,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14046,11 +13466,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (20)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -14125,11 +13540,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -14255,11 +13665,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14346,11 +13751,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (42)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14433,7 +13833,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14517,7 +13917,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14716,11 +14116,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (24)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14776,11 +14171,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (17)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -14897,11 +14287,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (31)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14976,11 +14361,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (14)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15054,11 +14434,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (36)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -15184,11 +14559,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15271,7 +14641,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15515,11 +14885,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (25)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15749,11 +15114,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15878,11 +15238,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (28)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15956,11 +15311,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16036,11 +15386,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (12)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16064,11 +15409,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -16202,7 +15542,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16374,11 +15714,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (29)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16402,11 +15737,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -16481,11 +15811,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (18)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -16611,11 +15936,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (43)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16639,11 +15959,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -16901,11 +16216,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (28)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17014,11 +16324,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (37)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -17144,11 +16449,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (44)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17223,11 +16523,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (14)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17251,11 +16546,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (25)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -17621,11 +16911,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17783,11 +17068,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (20)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17811,11 +17091,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (15)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -17972,11 +17247,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1274066120737411099, guid: c94e335b7d100a64cb7728bf6044dee3,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.3160081
-      objectReference: {fileID: 0}
-    - target: {fileID: 1274066120737411099, guid: c94e335b7d100a64cb7728bf6044dee3,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.4
       objectReference: {fileID: 0}
@@ -18025,35 +17295,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1642402254996052513, guid: c94e335b7d100a64cb7728bf6044dee3,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 1752238053406812516, guid: c94e335b7d100a64cb7728bf6044dee3,
         type: 3}
       propertyPath: m_Name
       value: Tree
-      objectReference: {fileID: 0}
-    - target: {fileID: 1752238053406812516, guid: c94e335b7d100a64cb7728bf6044dee3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1752238053406812516, guid: c94e335b7d100a64cb7728bf6044dee3,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 2559089213880545257, guid: c94e335b7d100a64cb7728bf6044dee3,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 8330125218523977879, guid: c94e335b7d100a64cb7728bf6044dee3,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18078,11 +17323,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -18158,11 +17398,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantBig (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18236,11 +17471,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (26)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -18327,11 +17557,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (38)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -18488,21 +17713,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.6408443
-      objectReference: {fileID: 0}
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.95524246
-      objectReference: {fileID: 0}
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.6408443
-      objectReference: {fileID: 0}
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.84
       objectReference: {fileID: 0}
@@ -18556,11 +17766,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mystical Rune Platform (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 2890265751522405163, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18584,11 +17789,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (39)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -18663,11 +17863,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -18793,11 +17988,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18821,11 +18011,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -18901,11 +18086,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (20)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18979,11 +18159,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -19149,11 +18324,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantBig (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19312,11 +18482,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (27)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19390,11 +18555,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (22)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -19528,7 +18688,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19603,11 +18763,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (38)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19869,11 +19024,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (32)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19948,11 +19098,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantBig (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20026,11 +19171,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (42)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -25029,7 +24169,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25054,11 +24194,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (15)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -25184,11 +24319,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (38)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25212,11 +24342,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (43)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -25291,11 +24416,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -25421,11 +24541,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (35)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25508,7 +24623,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25533,11 +24648,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (22)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -25677,7 +24787,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25761,7 +24871,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25845,7 +24955,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25870,11 +24980,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -25949,11 +25054,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -26171,7 +25271,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26277,11 +25377,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (35)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26355,11 +25450,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (35)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -26600,11 +25690,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (22)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26628,11 +25713,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (47)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -26707,11 +25787,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -26837,11 +25912,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (27)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26928,11 +25998,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (18)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27006,11 +26071,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27149,11 +26209,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27228,11 +26283,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (12)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27306,11 +26356,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -27436,11 +26481,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27464,11 +26504,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -27541,21 +26576,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.77019
-      objectReference: {fileID: 0}
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.1480452
-      objectReference: {fileID: 0}
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.77019
-      objectReference: {fileID: 0}
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.81
       objectReference: {fileID: 0}
@@ -27608,11 +26628,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mystical Rune Platform
-      objectReference: {fileID: 0}
-    - target: {fileID: 2890265751522405163, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27788,7 +26803,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27956,7 +26971,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28031,11 +27046,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (30)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28119,7 +27129,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28247,11 +27257,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28411,11 +27416,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28490,11 +27490,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (41)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28518,11 +27513,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -28771,11 +27761,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (39)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28870,7 +27855,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33791,11 +32776,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (36)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33819,11 +32799,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (18)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -33898,11 +32873,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -34028,11 +32998,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (41)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34056,11 +33021,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (33)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -34217,11 +33177,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (43)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34304,7 +33259,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34329,11 +33284,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (30)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -34408,11 +33358,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -34630,7 +33575,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34714,7 +33659,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34790,11 +33735,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (33)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34818,11 +33758,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (38)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -34956,7 +33891,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34977,21 +33912,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1849409222}
     m_Modifications:
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.6136181
-      objectReference: {fileID: 0}
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.9146591
-      objectReference: {fileID: 0}
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.6136181
-      objectReference: {fileID: 0}
     - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35046,11 +33966,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mystical Rune Platform (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2890265751522405163, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35125,11 +34040,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (36)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35272,7 +34182,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35347,11 +34257,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (42)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35435,7 +34340,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35460,11 +34365,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (24)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -35715,7 +34615,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35888,11 +34788,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -36103,11 +34998,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36131,11 +35021,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (45)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -36208,21 +35093,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.51056707
-      objectReference: {fileID: 0}
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.76105124
-      objectReference: {fileID: 0}
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.51056707
-      objectReference: {fileID: 0}
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.59
       objectReference: {fileID: 0}
@@ -36276,11 +35146,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mystical Rune Platform (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 2890265751522405163, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36304,11 +35169,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (30)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -36470,11 +35330,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantBig (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -36548,11 +35403,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -36628,11 +35478,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantBig (10)
       objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -36706,11 +35551,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -36844,7 +35684,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37012,11 +35852,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (20)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37099,7 +35934,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37273,7 +36108,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37399,7 +36234,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37474,11 +36309,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37602,7 +36432,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37762,11 +36592,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (39)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37786,21 +36611,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1849409222}
     m_Modifications:
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.27734923
-      objectReference: {fileID: 0}
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.41341677
-      objectReference: {fileID: 0}
-    - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.27734923
-      objectReference: {fileID: 0}
     - target: {fileID: 1085766756013380321, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37855,11 +36665,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mystical Rune Platform (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2890265751522405163, guid: 3b1dbf5c3284ceb40a87562da8a17b36,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37934,11 +36739,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (46)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38098,11 +36898,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (31)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38126,11 +36921,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (19)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -38205,11 +36995,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (47)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -38335,11 +37120,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (46)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38363,11 +37143,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (40)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -38443,11 +37218,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSmall (14)
       objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -38521,11 +37291,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (16)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -38651,11 +37416,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (32)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38729,11 +37489,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantMed (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38817,7 +37572,7 @@ PrefabInstance:
     - target: {fileID: 9006265723327457793, guid: e060c6b46518c094b9e200fea01a5e08,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38893,11 +37648,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (40)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38957,11 +37707,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (27)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -39087,11 +37832,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39166,11 +37906,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39194,11 +37929,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (23)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -39408,11 +38138,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantMed (15)
       objectReference: {fileID: 0}
-    - target: {fileID: 7368570761829577381, guid: f0d9c7c10f3d2d441a089940c50d1bce,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39436,11 +38161,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantBig (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092557185280569596, guid: 33a1f5daf3df9e7478e4443c47d8e488,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6215191059264770944, guid: 33a1f5daf3df9e7478e4443c47d8e488,
         type: 3}
@@ -39515,11 +38235,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (29)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}
@@ -39627,11 +38342,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantSmall (41)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1572089397078104442, guid: f767cfa62d6250f43a44eb7d5980c458,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5589088957117718780, guid: f767cfa62d6250f43a44eb7d5980c458,
         type: 3}

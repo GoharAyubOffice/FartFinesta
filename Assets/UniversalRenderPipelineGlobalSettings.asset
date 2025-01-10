@@ -54,18 +54,9 @@ MonoBehaviour:
       - rid: 7575160302408040457
       - rid: 7575160302408040458
       - rid: 1592467897900597459
+      - rid: 2192845323074535424
     m_RuntimeSettings:
-      m_List:
-      - rid: 1592467897900597440
-      - rid: 1592467897900597442
-      - rid: 1592467897900597444
-      - rid: 1592467897900597445
-      - rid: 1592467897900597447
-      - rid: 1592467897900597448
-      - rid: 1592467897900597449
-      - rid: 1592467897900597451
-      - rid: 1592467897900597456
-      - rid: 1592467897900597459
+      m_List: []
   m_AssetVersion: 8
   m_ObsoleteDefaultVolumeProfile: {fileID: 0}
   m_RenderingLayerNames:
@@ -176,6 +167,12 @@ MonoBehaviour:
         m_ExportShaderVariants: 1
         m_ShaderVariantLogLevel: 0
         m_StripRuntimeDebugShaders: 1
+    - rid: 2192845323074535424
+      type: {class: UniversalRenderPipelineEditorAssets, ns: UnityEngine.Rendering.Universal,
+        asm: Unity.RenderPipelines.Universal.Runtime}
+      data:
+        m_DefaultSettingsVolumeProfile: {fileID: 11400000, guid: eda47df5b85f4f249abf7abd73db2cb2,
+          type: 2}
     - rid: 7575160302408040448
       type: {class: UniversalRenderPipelineEditorShaders, ns: UnityEngine.Rendering.Universal,
         asm: Unity.RenderPipelines.Universal.Runtime}
@@ -235,6 +232,8 @@ MonoBehaviour:
         m_DefaultTerrainMaterial: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e,
           type: 2}
         m_DefaultDecalMaterial: {fileID: 2100000, guid: 31d0dcc6f2dd4e4408d18036a2c93862,
+          type: 2}
+        m_DefaultSpriteMaterial: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40,
           type: 2}
     - rid: 7575160302408040451
       type: {class: URPShaderStrippingSetting, ns: UnityEngine.Rendering.Universal,

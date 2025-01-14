@@ -18,6 +18,8 @@ public class PlayerTrigger : MonoBehaviour
 
     [SerializeField] private AudioSource[] audioSources;      // Array to store all AudioSource components in the scene
 
+    public float distanceToEnableCollider = 2f; // Adjust this value based on your needs
+
 
 
     void Start()
@@ -124,14 +126,11 @@ private void OnCollisionEnter(Collision other)
 
     void StopPlayerMovement()
     {
+        // Disable player movement scripts
         var joystickPlayer = GetComponent<JoystickPlayerExample>();
         if (joystickPlayer != null)
         {
             joystickPlayer.enabled = false;
-        }
-        else
-        {
-            Debug.LogWarning("JoystickPlayerExample script not found.");
         }
 
         var fartPropulsion = GetComponent<FartPropulsion>();
@@ -139,9 +138,32 @@ private void OnCollisionEnter(Collision other)
         {
             fartPropulsion.enabled = false;
         }
-        else
+
+        // Disable collider immediately after hitting trap
+        GetComponent<Collider>().enabled = false;
+
+        // Start checking distance to ground
+        StartCoroutine(CheckDistanceToGround());
+    }
+
+    private IEnumerator CheckDistanceToGround()
+    {
+        
+        Collider playerCollider = GetComponent<Collider>();
+
+        while (!playerCollider.enabled)
         {
-            Debug.LogWarning("FartPropulsion script not found.");
+            // Cast a ray downward to check distance to ground
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.down, out hit))
+            {
+                if (hit.collider.CompareTag("Ground") && hit.distance <= distanceToEnableCollider)
+                {
+                    playerCollider.enabled = true;
+                    break;
+                }
+            }
+            yield return new WaitForFixedUpdate();
         }
     }
 

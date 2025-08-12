@@ -7320,7 +7320,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8766651867985452537, guid: 3ba273460ae2f48ed82d3007724d025b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1259588576}
+    - targetCorrespondingSourceObject: {fileID: 8766651867985452537, guid: 3ba273460ae2f48ed82d3007724d025b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1259588575}
   m_SourcePrefab: {fileID: 100100000, guid: 3ba273460ae2f48ed82d3007724d025b, type: 3}
 --- !u!1001 &510410715
 PrefabInstance:
@@ -16947,6 +16955,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1256135273}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1259588572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8766651867985452537, guid: 3ba273460ae2f48ed82d3007724d025b,
+    type: 3}
+  m_PrefabInstance: {fileID: 508984683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1259588575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259588572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4debc7240ee313a479cc5a0a15ea1658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1259588576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259588572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e88396fa744a944aab9afbeeb14237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1261179061
 GameObject:
   m_ObjectHideFlags: 0
@@ -38945,6 +38983,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 624912564036869196, guid: 8442382a3cd6c0e4f93f2a286608a77d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 663263406947530069, guid: 8442382a3cd6c0e4f93f2a286608a77d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -39075,6 +39118,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 999242274}
+    - target: {fileID: 6796964770383504682, guid: 8442382a3cd6c0e4f93f2a286608a77d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7702657064937667044, guid: 8442382a3cd6c0e4f93f2a286608a77d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -39085,13 +39133,24 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1508378257}
+    - target: {fileID: 7727312229778974303, guid: 8442382a3cd6c0e4f93f2a286608a77d,
+        type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727312229778974303, guid: 8442382a3cd6c0e4f93f2a286608a77d,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7856759688041837193, guid: 8442382a3cd6c0e4f93f2a286608a77d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2278878532079401640, guid: 8442382a3cd6c0e4f93f2a286608a77d, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8442382a3cd6c0e4f93f2a286608a77d, type: 3}
@@ -39231,9 +39290,9 @@ SceneRoots:
   - {fileID: 140296221}
   - {fileID: 1263010010942492727}
   - {fileID: 8450703679446199285}
+  - {fileID: 1992996030}
   - {fileID: 4107931304268807219}
   - {fileID: 1442111801}
-  - {fileID: 1992996030}
   - {fileID: 1727357840}
   - {fileID: 182081685}
   - {fileID: 1423756194}

@@ -7,6 +7,8 @@ public class SaveManager : MonoBehaviour
     private static SaveManager instance;
     private const string SCENE_KEY = "LastPlayedScene";
     private const string LEVEL_KEY = "CurrentLevel";
+    private const string DEATH_COUNT_KEY = "DeathCount_Level_";
+    private const string TOTAL_DEATHS_KEY = "TotalDeaths";
     private bool isFirstLoad = true;
 
     public static SaveManager Instance
@@ -90,6 +92,55 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.DeleteKey(LEVEL_KEY);
         PlayerPrefs.Save();
         Debug.Log("Progress reset complete");
+    }
+    
+    // Death tracking methods
+    public void IncrementDeathCount(int levelBuildIndex)
+    {
+        string levelKey = DEATH_COUNT_KEY + levelBuildIndex.ToString();
+        int currentDeaths = PlayerPrefs.GetInt(levelKey, 0);
+        int totalDeaths = PlayerPrefs.GetInt(TOTAL_DEATHS_KEY, 0);
+        
+        PlayerPrefs.SetInt(levelKey, currentDeaths + 1);
+        PlayerPrefs.SetInt(TOTAL_DEATHS_KEY, totalDeaths + 1);
+        PlayerPrefs.Save();
+        
+        Debug.Log($"Death count for level {levelBuildIndex}: {currentDeaths + 1}, Total deaths: {totalDeaths + 1}");
+    }
+    
+    public int GetDeathCount(int levelBuildIndex)
+    {
+        string levelKey = DEATH_COUNT_KEY + levelBuildIndex.ToString();
+        return PlayerPrefs.GetInt(levelKey, 0);
+    }
+    
+    public int GetTotalDeathCount()
+    {
+        return PlayerPrefs.GetInt(TOTAL_DEATHS_KEY, 0);
+    }
+    
+    public void ResetDeathCount(int levelBuildIndex)
+    {
+        string levelKey = DEATH_COUNT_KEY + levelBuildIndex.ToString();
+        PlayerPrefs.DeleteKey(levelKey);
+        PlayerPrefs.Save();
+        Debug.Log($"Death count reset for level {levelBuildIndex}");
+    }
+    
+    public void ResetAllDeathCounts()
+    {
+        // Reset all death counts (note: this is brute force, but works for reasonable level counts)
+        for (int i = 0; i < 100; i++) // assuming max 100 levels
+        {
+            string levelKey = DEATH_COUNT_KEY + i.ToString();
+            if (PlayerPrefs.HasKey(levelKey))
+            {
+                PlayerPrefs.DeleteKey(levelKey);
+            }
+        }
+        PlayerPrefs.DeleteKey(TOTAL_DEATHS_KEY);
+        PlayerPrefs.Save();
+        Debug.Log("All death counts reset");
     }
 }
 

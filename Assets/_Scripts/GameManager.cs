@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float _UIShowDelay = 2f;
 
     private int currentLevel;
+    
+    // Video ad reward functionality
+    public static bool canGrantExtraLife = false;
 
     void Start()
     {
@@ -78,6 +81,7 @@ public class GameManager : MonoBehaviour
     {
         int currentLevel = SceneManager.GetActiveScene().buildIndex;
         SaveManager.Instance.SaveProgress(currentLevel);  // Save progress when level is completed
+        SaveManager.Instance.ResetDeathCount(currentLevel); // Reset death count on successful completion
 
         if (isGameFinished) return;
 

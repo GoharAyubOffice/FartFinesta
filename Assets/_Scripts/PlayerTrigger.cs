@@ -80,6 +80,11 @@ private void OnCollisionEnter(Collision other)
             gameManager.fartPropulsion.enabled = true;
             gameManager.fartButton.enabled = true;
 
+        // Reset death count for this level when completed successfully
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        SaveManager.Instance.ResetDeathCount(currentLevelIndex);
+        Debug.Log($"Level {currentLevelIndex} completed! Death count reset.");
+
         if (gameManager != null)
         {
             gameManager.FinishGame();
@@ -112,6 +117,18 @@ private void OnCollisionEnter(Collision other)
         playerAnimator.SetBool("Die",true);
 
         Debug.Log("Player Died");
+        
+        // Increment death count for current level
+        int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
+        SaveManager.Instance.IncrementDeathCount(currentLevelIndex);
+        
+        // Check if we should show ads automatically (2+ deaths)
+        int deathCount = SaveManager.Instance.GetDeathCount(currentLevelIndex);
+        if (deathCount >= 2 && AdsManager.instance != null)
+        {
+            Debug.Log($"Player died {deathCount} times. Triggering automatic ad...");
+            AdsManager.instance.TriggerAdAfterDeath(deathCount);
+        }
         
         // Optionally, if you have a GameOver UI or similar, show it here
         if (gameManager != null)

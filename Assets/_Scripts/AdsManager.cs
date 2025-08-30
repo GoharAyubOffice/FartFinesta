@@ -329,7 +329,7 @@ private void Awake()
         GameManager.canGrantExtraLife = true;
         
         // Find the GameManager in the scene and trigger retry/continue
-        GameManager gameManager = FindObjectOfType<GameManager>();
+        GameManager gameManager = FindFirstObjectByType<GameManager>();
         if (gameManager != null)
         {
             // Grant the player another chance to continue from where they died
